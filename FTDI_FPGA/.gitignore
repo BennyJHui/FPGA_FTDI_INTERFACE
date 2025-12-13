@@ -1,0 +1,30 @@
+# ===============================
+# Vivado generated directories
+# ===============================
+project_*/project_*.cache/
+project_*/project_*.hw/
+project_*/project_*.ip_user_files/
+project_*/project_*.runs/
+project_*/project_*.sim/
+
+# ===============================
+# Vivado temporary / logs
+# ===============================
+*.jou
+*.log
+*.str
+*.pb
+
+# ===============================
+# OS / Editor junk
+# ===============================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ===============================
+# Backup / temp files
+# ===============================
+*~
+*.swp
