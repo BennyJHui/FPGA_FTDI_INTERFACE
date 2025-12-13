@@ -29,7 +29,7 @@ module ftdi_synchronous_245(
 
     //+++++++++ FT601Q-B Bus Signals(synchron mode) +++++++++++
     input usb_clock_i, // 100
-    input [31:0] usb_data_io,
+    input [31:0] usb_data_io, // this should be inout, should use tri-state buffer and have wire and reg to be either i or o
     output reg usb_rd_n_o,
     output reg usb_wr_n_o,
     output reg usb_oe_n_o,
@@ -218,13 +218,7 @@ always @(posedge usb_clock_i) begin
                 state <= RX_DATA_S5;
             end
 
-            // RX_REC_S4: begin //6
-            //     RX_wr_en <= 1;
-            //     state <= RX_DATA_S5;
-            // end
-
-
-// ------------------- FIX READ STATE (this part is receiving data to fifo)
+// ------------------- READ STATES
             RX_DATA_S5: begin //7
                 if (!RX_empty) begin
                     RX_rd_en <= 1;
@@ -234,9 +228,6 @@ always @(posedge usb_clock_i) begin
 
             RX_S6: begin //8
                 RX_rd_en <= 0;
-                // if (RX_valid) begin
-                //     ftdi_to_fpga <= RX_dout;
-                // end
 
                 if (cnt_latency == 2'b10) begin
                     state <= IDLE;
