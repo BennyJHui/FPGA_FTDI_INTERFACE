@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "fifo_generator_v13_2_11" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "TB_ftdi_synchronous_245_behav" "xil_defaultlib.TB_ftdi_synchronous_245" "xil_defaultlib.glbl" -log "elaborate.log" 

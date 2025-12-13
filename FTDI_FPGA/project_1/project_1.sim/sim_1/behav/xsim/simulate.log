@@ -1,0 +1,7 @@
+Time resolution is 1 ps
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+$stop called at time : 890 ns : File "C:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.srcs/sim_1/new/TB_ftdi_synchronous_245.v" Line 188
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+$stop called at time : 890 ns : File "C:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.srcs/sim_1/new/TB_ftdi_synchronous_245.v" Line 188

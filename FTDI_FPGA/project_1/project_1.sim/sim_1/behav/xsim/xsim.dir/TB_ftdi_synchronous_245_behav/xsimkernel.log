@@ -1,0 +1,7 @@
+Running: xsim.dir/TB_ftdi_synchronous_245_behav/xsimk.exe -simmode gui -wdb TB_ftdi_synchronous_245_behav.wdb -simrunnum 0 -socket 49331
+Design successfully loaded
+Design Loading Memory Usage: 28792 KB (Peak: 28792 KB)
+Design Loading CPU Usage: 640 ms
+Simulation completed
+Simulation Memory Usage: 29764 KB (Peak: 29764 KB)
+Simulation CPU Usage: 671 ms
