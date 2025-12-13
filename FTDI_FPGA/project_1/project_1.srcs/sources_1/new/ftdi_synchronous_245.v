@@ -51,7 +51,7 @@ module ftdi_synchronous_245(
     output rd_fifo_data_valid_o,
 
     //++++++ FTDI Data Interface +++++++++
-    output reg [63:0] FTDI_TO_FPGA
+    output reg [63:0] ftdi_to_fpga
 );
 
 wire [31:0] receive_data;
@@ -234,9 +234,9 @@ always @(posedge usb_clock_i) begin
 
             RX_S6: begin //8
                 RX_rd_en <= 0;
-                if (RX_valid) begin
-                    FTDI_TO_FPGA <= RX_dout;
-                end
+                // if (RX_valid) begin
+                //     ftdi_to_fpga <= RX_dout;
+                // end
 
                 if (cnt_latency == 2'b10) begin
                     state <= IDLE;
@@ -245,13 +245,15 @@ always @(posedge usb_clock_i) begin
                 cnt_latency <= cnt_latency + 1;
             end
 
-            // FINAL: begin //F
-            //     state <= FINAL;
-            // end
-
             default: state <= IDLE;
         endcase
     end
+end
+
+always @(posedge clk_in_200) begin
+    if (RX_valid) begin
+        ftdi_to_fpga <= RX_dout;
+    end    
 end
 
 assign rd_data_o = 0;
