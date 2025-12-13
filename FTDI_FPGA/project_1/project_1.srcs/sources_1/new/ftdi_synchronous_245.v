@@ -50,8 +50,9 @@ module ftdi_synchronous_245(
     output wr_fifo_wr_ack_o,
     output rd_fifo_data_valid_o,
 
-    //++++++ FTDI Data Interface +++++++++
-    output reg [63:0] ftdi_to_fpga
+    //++++++ FTDI Data Interface +++++++++ 
+    output reg [63:0] ftdi_to_fpga,
+    output reg [31:0] fpga_to_ftdi
 );
 
 wire [31:0] receive_data;
@@ -132,6 +133,8 @@ reg [2:0] waiter = 0;
 reg [6:0] count = 0;
 reg [3:0] state = IDLE;
 
+reg [63:0] example_data = 64'hAAAABBBBCCCCDDDD; // Treat this as data from ddr4 memory
+
 reg cnt = 0;
 reg [1:0] cnt_latency = 0;
 
@@ -144,6 +147,10 @@ localparam RX_RST_S3 = 4'b0101;
 localparam RX_REC_S4 = 4'b0110;
 localparam RX_DATA_S5 = 4'b0111;
 localparam RX_S6 = 4'b1000;
+localparam TX_S1 = 4'b1001;
+localparam TX_RST_S2 = 4'b1010;
+localparam TX_S3 = 4'b1011;
+localparam TX_S4 = 4'b1100;
 localparam FINAL = 4'b1111;
 
 assign receive_data = usb_data_io;
@@ -163,6 +170,7 @@ always @(posedge usb_clock_i) begin
                 RX_wr_en <= 0;
                 usb_oe_n_o <= 1;
                 usb_rd_n_o <= 1;
+                usb_wr_n_o <= 1;
 
                 if (!usb_rxf_n_i) begin
                     state <= RX_ROUTE;
@@ -174,8 +182,49 @@ always @(posedge usb_clock_i) begin
             end
 
             TX_ROUTE: begin //1
-                state <= TX_ROUTE;
-            end 
+                if (waiter < 3'b011) begin
+                    waiter <= waiter + 1;
+                    state <= TX_ROUTE;
+                end else begin
+                    waiter <= 0;
+                    state <= TX_S1;
+                end
+            end
+
+            TX_S1: begin
+                // there should be flag from fsm before this to ensure you actually got data from mig
+                TX_din <= example_data;
+                TX_wr_en <= 1;
+                if (usb_txe_n_i) begin
+                    state <= TX_RST_S2;
+                end else begin
+                    state <= TX_S1;
+                end
+            end
+
+            TX_RST_S2: begin
+                TX_wr_en <= 0;
+                state <= TX_S3;
+            end
+
+            TX_S3: begin
+                if (!TX_empty) begin
+                    TX_rd_en <= 1;
+                    state <= TX_S4;
+                end
+            end
+
+            TX_S4: begin
+                TX_rd_en <= 0;
+                if (TX_valid) begin
+                    fpga_to_ftdi <= TX_dout;
+                end  
+                if (cnt_latency == 2'b10) begin
+                    state <= IDLE;
+                    cnt_latency <= 0;
+                end
+                cnt_latency <= cnt_latency + 1;
+            end
 
             RX_ROUTE: begin //2
                 if (waiter < 3'b001) begin
