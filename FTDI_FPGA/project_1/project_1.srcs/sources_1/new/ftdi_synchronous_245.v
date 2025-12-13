@@ -133,6 +133,7 @@ reg [6:0] count = 0;
 reg [3:0] state = IDLE;
 
 reg cnt = 0;
+reg [1:0] cnt_latency = 0;
 
 localparam IDLE = 4'b0000;
 localparam TX_ROUTE = 4'b0001;
@@ -181,6 +182,7 @@ always @(posedge usb_clock_i) begin
                     waiter <= waiter + 1;
                     state <= RX_ROUTE;
                 end else begin
+                    waiter <= 0;
                     state <= RX_OE_S1;
                 end
             end
@@ -201,6 +203,7 @@ always @(posedge usb_clock_i) begin
                 end
 
                 if (usb_rxf_n_i) begin
+                    cnt <= 0;
                     state <= RX_RST_S3;
                 end else begin
                     state <= RX_DATA_S2;
@@ -234,7 +237,12 @@ always @(posedge usb_clock_i) begin
                 if (RX_valid) begin
                     FTDI_TO_FPGA <= RX_dout;
                 end
-                state <= RX_S6;
+
+                if (cnt_latency == 2'b10) begin
+                    state <= IDLE;
+                    cnt_latency <= 0;
+                end
+                cnt_latency <= cnt_latency + 1;
             end
 
             // FINAL: begin //F
