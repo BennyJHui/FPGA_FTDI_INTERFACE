@@ -75,7 +75,7 @@ wire [8:0] RX_rd_data_count;
 // wire RX_rd_rst_busy;
 
 // TX signals
-wire [63:0] TX_din;
+reg [63:0] TX_din;
 reg TX_wr_en;
 reg TX_rd_en;
 wire [31:0] TX_dout;
@@ -129,15 +129,6 @@ tx_fifo U_tx_fifo (
   .rd_rst_busy()  // output wire rd_rst_busy
 );
 
-reg [2:0] waiter = 0;
-reg [6:0] count = 0;
-reg [3:0] state = IDLE;
-
-reg [63:0] example_data = 64'hAAAABBBBCCCCDDDD; // Treat this as data from ddr4 memory
-
-reg cnt = 0;
-reg [1:0] cnt_latency = 0;
-
 localparam IDLE = 4'b0000;
 localparam TX_ROUTE = 4'b0001;
 localparam RX_ROUTE = 4'b0010;
@@ -152,6 +143,16 @@ localparam TX_RST_S2 = 4'b1010;
 localparam TX_S3 = 4'b1011;
 localparam TX_S4 = 4'b1100;
 localparam FINAL = 4'b1111;
+
+reg [2:0] waiter = 0;
+reg [6:0] count = 0;
+
+reg [63:0] example_data = 64'hAAAABBBBCCCCDDDD; // Treat this as data from ddr4 memory
+
+reg cnt = 0;
+reg [1:0] cnt_latency = 0;
+
+reg [3:0] state = IDLE;
 
 assign receive_data = usb_data_io;
 assign usb_siwu_o = 1;
@@ -172,6 +173,7 @@ always @(posedge usb_clock_i) begin
                 usb_rd_n_o <= 1;
                 usb_wr_n_o <= 1;
 
+                // prob change this make it so its fsm dependant rather than ftdi flags cuz this could be randomized
                 if (!usb_rxf_n_i) begin
                     state <= RX_ROUTE;
                 end else if (!usb_txe_n_i) begin
@@ -217,6 +219,7 @@ always @(posedge usb_clock_i) begin
             TX_S4: begin
                 TX_rd_en <= 0;
                 if (TX_valid) begin
+                    usb_wr_n_o <= 0;
                     fpga_to_ftdi <= TX_dout;
                 end  
                 if (cnt_latency == 2'b10) begin
