@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TB_ftdi_synchronous_245_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TB_ftdi_synchronous_245" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="5,999,991 ps"></ZoomStartTime>
+      <ZoomEndTime time="6,000,002 ps"></ZoomEndTime>
+      <Cursor1Time time="6,000,000 ps"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="296"></NameColumnWidth>
+      <ValueColumnWidth column_width="76"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="74" />
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/clk_in_200" type="logic">
+      <obj_property name="ElementShortName">clk_in_200</obj_property>
+      <obj_property name="ObjectShortName">clk_in_200</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/reset_n_i" type="logic">
+      <obj_property name="ElementShortName">reset_n_i</obj_property>
+      <obj_property name="ObjectShortName">reset_n_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/usb_clock_i" type="logic">
+      <obj_property name="ElementShortName">usb_clock_i</obj_property>
+      <obj_property name="ObjectShortName">usb_clock_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/usb_data_io" type="array">
+      <obj_property name="ElementShortName">usb_data_io[31:0]</obj_property>
+      <obj_property name="ObjectShortName">usb_data_io[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/usb_rd_n_o" type="logic">
+      <obj_property name="ElementShortName">usb_rd_n_o</obj_property>
+      <obj_property name="ObjectShortName">usb_rd_n_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/usb_wr_n_o" type="logic">
+      <obj_property name="ElementShortName">usb_wr_n_o</obj_property>
+      <obj_property name="ObjectShortName">usb_wr_n_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/usb_oe_n_o" type="logic">
+      <obj_property name="ElementShortName">usb_oe_n_o</obj_property>
+      <obj_property name="ObjectShortName">usb_oe_n_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/usb_rxf_n_i" type="logic">
+      <obj_property name="ElementShortName">usb_rxf_n_i</obj_property>
+      <obj_property name="ObjectShortName">usb_rxf_n_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/usb_txe_n_i" type="logic">
+      <obj_property name="ElementShortName">usb_txe_n_i</obj_property>
+      <obj_property name="ObjectShortName">usb_txe_n_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/usb_siwu_o" type="logic">
+      <obj_property name="ElementShortName">usb_siwu_o</obj_property>
+      <obj_property name="ObjectShortName">usb_siwu_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/wr_data_i" type="array">
+      <obj_property name="ElementShortName">wr_data_i[63:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_data_i[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/wr_en_i" type="logic">
+      <obj_property name="ElementShortName">wr_en_i</obj_property>
+      <obj_property name="ObjectShortName">wr_en_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/rd_en_i" type="logic">
+      <obj_property name="ElementShortName">rd_en_i</obj_property>
+      <obj_property name="ObjectShortName">rd_en_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/rd_data_o" type="array">
+      <obj_property name="ElementShortName">rd_data_o[63:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_data_o[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/rd_fifo_empty_o" type="logic">
+      <obj_property name="ElementShortName">rd_fifo_empty_o</obj_property>
+      <obj_property name="ObjectShortName">rd_fifo_empty_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/rd_fifo_cnt_o" type="logic">
+      <obj_property name="ElementShortName">rd_fifo_cnt_o</obj_property>
+      <obj_property name="ObjectShortName">rd_fifo_cnt_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/wr_fifo_full_o" type="logic">
+      <obj_property name="ElementShortName">wr_fifo_full_o</obj_property>
+      <obj_property name="ObjectShortName">wr_fifo_full_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/wr_fifo_afull_o" type="logic">
+      <obj_property name="ElementShortName">wr_fifo_afull_o</obj_property>
+      <obj_property name="ObjectShortName">wr_fifo_afull_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/wr_fifo_wr_ack_o" type="logic">
+      <obj_property name="ElementShortName">wr_fifo_wr_ack_o</obj_property>
+      <obj_property name="ObjectShortName">wr_fifo_wr_ack_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/rd_fifo_data_valid_o" type="logic">
+      <obj_property name="ElementShortName">rd_fifo_data_valid_o</obj_property>
+      <obj_property name="ObjectShortName">rd_fifo_data_valid_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/ftdi_to_fpga" type="array">
+      <obj_property name="ElementShortName">ftdi_to_fpga[63:0]</obj_property>
+      <obj_property name="ObjectShortName">ftdi_to_fpga[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/fpga_to_ftdi" type="array">
+      <obj_property name="ElementShortName">fpga_to_ftdi[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fpga_to_ftdi[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/receive_data" type="array">
+      <obj_property name="ElementShortName">receive_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">receive_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/transmit_data" type="array">
+      <obj_property name="ElementShortName">transmit_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">transmit_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/RX_din" type="array">
+      <obj_property name="ElementShortName">RX_din[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RX_din[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/RX_wr_en" type="logic">
+      <obj_property name="ElementShortName">RX_wr_en</obj_property>
+      <obj_property name="ObjectShortName">RX_wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/RX_rd_en" type="logic">
+      <obj_property name="ElementShortName">RX_rd_en</obj_property>
+      <obj_property name="ObjectShortName">RX_rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/RX_dout" type="array">
+      <obj_property name="ElementShortName">RX_dout[63:0]</obj_property>
+      <obj_property name="ObjectShortName">RX_dout[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/RX_full" type="logic">
+      <obj_property name="ElementShortName">RX_full</obj_property>
+      <obj_property name="ObjectShortName">RX_full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/RX_empty" type="logic">
+      <obj_property name="ElementShortName">RX_empty</obj_property>
+      <obj_property name="ObjectShortName">RX_empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/RX_valid" type="logic">
+      <obj_property name="ElementShortName">RX_valid</obj_property>
+      <obj_property name="ObjectShortName">RX_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/RX_rd_data_count" type="array">
+      <obj_property name="ElementShortName">RX_rd_data_count[8:0]</obj_property>
+      <obj_property name="ObjectShortName">RX_rd_data_count[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/TX_din" type="array">
+      <obj_property name="ElementShortName">TX_din[63:0]</obj_property>
+      <obj_property name="ObjectShortName">TX_din[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/TX_wr_en" type="logic">
+      <obj_property name="ElementShortName">TX_wr_en</obj_property>
+      <obj_property name="ObjectShortName">TX_wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/TX_rd_en" type="logic">
+      <obj_property name="ElementShortName">TX_rd_en</obj_property>
+      <obj_property name="ObjectShortName">TX_rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/TX_dout" type="array">
+      <obj_property name="ElementShortName">TX_dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">TX_dout[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/TX_full" type="logic">
+      <obj_property name="ElementShortName">TX_full</obj_property>
+      <obj_property name="ObjectShortName">TX_full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/TX_wr_ack" type="logic">
+      <obj_property name="ElementShortName">TX_wr_ack</obj_property>
+      <obj_property name="ObjectShortName">TX_wr_ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/TX_empty" type="logic">
+      <obj_property name="ElementShortName">TX_empty</obj_property>
+      <obj_property name="ObjectShortName">TX_empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/TX_valid" type="logic">
+      <obj_property name="ElementShortName">TX_valid</obj_property>
+      <obj_property name="ObjectShortName">TX_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/waiter" type="array">
+      <obj_property name="ElementShortName">waiter[2:0]</obj_property>
+      <obj_property name="ObjectShortName">waiter[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/count" type="array">
+      <obj_property name="ElementShortName">count[6:0]</obj_property>
+      <obj_property name="ObjectShortName">count[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/example_data" type="array">
+      <obj_property name="ElementShortName">example_data[63:0]</obj_property>
+      <obj_property name="ObjectShortName">example_data[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/cnt" type="logic">
+      <obj_property name="ElementShortName">cnt</obj_property>
+      <obj_property name="ObjectShortName">cnt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/cnt_latency" type="array">
+      <obj_property name="ElementShortName">cnt_latency[1:0]</obj_property>
+      <obj_property name="ObjectShortName">cnt_latency[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/state" type="array">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_ftdi_synchronous_245/stateTX" type="array">
+      <obj_property name="ElementShortName">stateTX[2:0]</obj_property>
+      <obj_property name="ObjectShortName">stateTX[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/c0_ddr4_ui_clk" type="logic">
+      <obj_property name="ElementShortName">c0_ddr4_ui_clk</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_ui_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/reset_n_i" type="logic">
+      <obj_property name="ElementShortName">reset_n_i</obj_property>
+      <obj_property name="ObjectShortName">reset_n_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/c0_ddr4_app_rdy" type="logic">
+      <obj_property name="ElementShortName">c0_ddr4_app_rdy</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_app_rdy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/c0_ddr4_app_wdf_rdy" type="logic">
+      <obj_property name="ElementShortName">c0_ddr4_app_wdf_rdy</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_app_wdf_rdy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/c0_ddr4_app_rd_data_valid" type="logic">
+      <obj_property name="ElementShortName">c0_ddr4_app_rd_data_valid</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_app_rd_data_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/c0_init_calib_complete" type="logic">
+      <obj_property name="ElementShortName">c0_init_calib_complete</obj_property>
+      <obj_property name="ObjectShortName">c0_init_calib_complete</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/c0_ddr4_app_rd_data" type="array">
+      <obj_property name="ElementShortName">c0_ddr4_app_rd_data[255:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_app_rd_data[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/c0_ddr4_app_en" type="logic">
+      <obj_property name="ElementShortName">c0_ddr4_app_en</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_app_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/c0_ddr4_app_wdf_wren" type="logic">
+      <obj_property name="ElementShortName">c0_ddr4_app_wdf_wren</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_app_wdf_wren</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/c0_ddr4_app_cmd" type="array">
+      <obj_property name="ElementShortName">c0_ddr4_app_cmd[2:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_app_cmd[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/c0_ddr4_app_addr" type="array">
+      <obj_property name="ElementShortName">c0_ddr4_app_addr[28:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_app_addr[28:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/c0_ddr4_app_wdf_data" type="array">
+      <obj_property name="ElementShortName">c0_ddr4_app_wdf_data[255:0]</obj_property>
+      <obj_property name="ObjectShortName">c0_ddr4_app_wdf_data[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/wr_data_i" type="array">
+      <obj_property name="ElementShortName">wr_data_i[63:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_data_i[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/wr_en_i" type="logic">
+      <obj_property name="ElementShortName">wr_en_i</obj_property>
+      <obj_property name="ObjectShortName">wr_en_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/wr_fifo_full_o" type="logic">
+      <obj_property name="ElementShortName">wr_fifo_full_o</obj_property>
+      <obj_property name="ObjectShortName">wr_fifo_full_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/rd_en_i" type="logic">
+      <obj_property name="ElementShortName">rd_en_i</obj_property>
+      <obj_property name="ObjectShortName">rd_en_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/rd_data_o" type="array">
+      <obj_property name="ElementShortName">rd_data_o[63:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_data_o[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/rd_fifo_empty_o" type="logic">
+      <obj_property name="ElementShortName">rd_fifo_empty_o</obj_property>
+      <obj_property name="ObjectShortName">rd_fifo_empty_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/rd_fifo_data_valid_o" type="logic">
+      <obj_property name="ElementShortName">rd_fifo_data_valid_o</obj_property>
+      <obj_property name="ObjectShortName">rd_fifo_data_valid_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/count_sel" type="array">
+      <obj_property name="ElementShortName">count_sel[3:0]</obj_property>
+      <obj_property name="ObjectShortName">count_sel[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/count" type="array">
+      <obj_property name="ElementShortName">count[3:0]</obj_property>
+      <obj_property name="ObjectShortName">count[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/shift_data_sel" type="array">
+      <obj_property name="ElementShortName">shift_data_sel[63:0]</obj_property>
+      <obj_property name="ObjectShortName">shift_data_sel[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/data_storage" type="array">
+      <obj_property name="ElementShortName">data_storage[63:0]</obj_property>
+      <obj_property name="ObjectShortName">data_storage[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/data_read_from_memory" type="array">
+      <obj_property name="ElementShortName">data_read_from_memory[255:0]</obj_property>
+      <obj_property name="ObjectShortName">data_read_from_memory[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/state" type="array">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/select_data" type="array">
+      <obj_property name="ElementShortName">select_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">select_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_ftdi_synchronous_245/U_fsmplease/shift_count" type="array">
+      <obj_property name="ElementShortName">shift_count[7:0]</obj_property>
+      <obj_property name="ObjectShortName">shift_count[7:0]</obj_property>
+   </wvobject>
+</wave_config>

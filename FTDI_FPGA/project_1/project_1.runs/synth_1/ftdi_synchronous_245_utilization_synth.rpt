@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Fri Dec 12 18:44:22 2025
+| Date         : Mon Dec 15 17:53:52 2025
 | Host         : RT-C-0095M running 64-bit major release  (build 9200)
 | Command      : report_utilization -file ftdi_synchronous_245_utilization_synth.rpt -pb ftdi_synchronous_245_utilization_synth.pb
 | Design       : ftdi_synchronous_245
@@ -32,11 +32,11 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*               |   13 |     0 |          0 |     77760 |  0.02 |
-|   LUT as Logic          |   13 |     0 |          0 |     77760 |  0.02 |
+| CLB LUTs*               |   23 |     0 |          0 |     77760 |  0.03 |
+|   LUT as Logic          |   23 |     0 |          0 |     77760 |  0.03 |
 |   LUT as Memory         |    0 |     0 |          0 |     40320 |  0.00 |
-| CLB Registers           |  105 |     0 |          0 |    155520 |  0.07 |
-|   Register as Flip Flop |  105 |     0 |          0 |    155520 |  0.07 |
+| CLB Registers           |  178 |     0 |          0 |    155520 |  0.11 |
+|   Register as Flip Flop |  178 |     0 |          0 |    155520 |  0.11 |
 |   Register as Latch     |    0 |     0 |          0 |    155520 |  0.00 |
 | CARRY8                  |    0 |     0 |          0 |      9720 |  0.00 |
 | F7 Muxes                |    0 |     0 |          0 |     38880 |  0.00 |
@@ -62,8 +62,8 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 0     |          Yes |         Set |            - |
-| 105   |          Yes |       Reset |            - |
+| 1     |          Yes |         Set |            - |
+| 177   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -93,11 +93,11 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 4. I/O
 ------
 
-+------------+------+-------+------------+-----------+-------+
-|  Site Type | Used | Fixed | Prohibited | Available | Util% |
-+------------+------+-------+------------+-----------+-------+
-| Bonded IOB |  112 |     0 |          0 |       228 | 49.12 |
-+------------+------+-------+------------+-----------+-------+
++------------+------+-------+------------+-----------+--------+
+|  Site Type | Used | Fixed | Prohibited | Available |  Util% |
++------------+------+-------+------------+-----------+--------+
+| Bonded IOB |  271 |     0 |          0 |       228 | 118.86 |
++------------+------+-------+------------+-----------+--------+
 
 
 5. CLOCK
@@ -106,7 +106,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| BUFGCE     |    1 |     0 |          0 |        84 |  1.19 |
+| BUFGCE     |    2 |     0 |          0 |        84 |  2.38 |
 | BUFGCE_DIV |    0 |     0 |          0 |        12 |  0.00 |
 | BUFG_GT    |    0 |     0 |          0 |        72 |  0.00 |
 | BUFGCTRL*  |    0 |     0 |          0 |        24 |  0.00 |
@@ -153,16 +153,18 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  105 |            Register |
-| OBUF     |   74 |                 I/O |
-| INBUF    |   37 |                 I/O |
-| IBUFCTRL |   37 |              Others |
-| LUT6     |    4 |                 CLB |
-| LUT5     |    4 |                 CLB |
-| LUT4     |    4 |                 CLB |
-| LUT1     |    2 |                 CLB |
-| OBUFT    |    1 |                 I/O |
-| BUFGCE   |    1 |               Clock |
+| FDRE     |  177 |            Register |
+| OBUF     |  170 |                 I/O |
+| INBUF    |  101 |                 I/O |
+| IBUFCTRL |  101 |              Others |
+| LUT5     |    9 |                 CLB |
+| LUT6     |    5 |                 CLB |
+| LUT1     |    5 |                 CLB |
+| LUT2     |    3 |                 CLB |
+| BUFGCE   |    2 |               Clock |
+| LUT4     |    1 |                 CLB |
+| LUT3     |    1 |                 CLB |
+| FDSE     |    1 |            Register |
 +----------+------+---------------------+
 
 

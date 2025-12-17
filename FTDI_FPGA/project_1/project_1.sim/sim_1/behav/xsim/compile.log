@@ -1,9 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/tx_fifo/sim/tx_fifo.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tx_fifo
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/rx_fifo/sim/rx_fifo.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module rx_fifo
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ftdi_synchronous_245
-WARNING: [VRFC 10-3380] identifier 'IDLE' is used before its declaration [C:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:133]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.srcs/sim_1/new/TB_ftdi_synchronous_245.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module TB_ftdi_synchronous_245

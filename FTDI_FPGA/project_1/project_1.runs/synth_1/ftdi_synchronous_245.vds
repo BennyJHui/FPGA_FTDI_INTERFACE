@@ -3,12 +3,12 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Fri Dec 12 18:43:34 2025
-# Process ID         : 29088
-# Current directory  : C:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.runs/synth_1
+# Start of session at: Mon Dec 15 17:53:02 2025
+# Process ID         : 36076
+# Current directory  : C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.runs/synth_1
 # Command line       : vivado.exe -log ftdi_synchronous_245.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ftdi_synchronous_245.tcl
-# Log file           : C:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.runs/synth_1/ftdi_synchronous_245.vds
-# Journal file       : C:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.runs/synth_1\vivado.jou
+# Log file           : C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.runs/synth_1/ftdi_synchronous_245.vds
+# Journal file       : C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.runs/synth_1\vivado.jou
 # Running On         : RT-C-0095M
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 22631
@@ -19,11 +19,11 @@
 # Host memory        : 33805 MB
 # Swap memory        : 6710 MB
 # Total Virtual      : 40516 MB
-# Available Virtual  : 15739 MB
+# Available Virtual  : 17338 MB
 #-----------------------------------------------------------
 source ftdi_synchronous_245.tcl -notrace
-Command: read_checkpoint -auto_incremental -incremental C:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.srcs/utils_1/imports/synth_1/ftdi_synchronous_245.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.srcs/utils_1/imports/synth_1/ftdi_synchronous_245.dcp for incremental synthesis
+Command: read_checkpoint -auto_incremental -incremental C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/utils_1/imports/synth_1/ftdi_synchronous_245.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/utils_1/imports/synth_1/ftdi_synchronous_245.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top ftdi_synchronous_245 -part xcau15p-ffvb676-2-i
 Starting synth_design
@@ -34,63 +34,121 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 33340
+INFO: [Synth 8-7075] Helper process launched with PID 19800
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1272.562 ; gain = 467.086
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1274.707 ; gain = 467.992
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6901] identifier 'IDLE' is used before its declaration [C:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:133]
-INFO: [Synth 8-6157] synthesizing module 'ftdi_synchronous_245' [C:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:23]
-INFO: [Synth 8-6157] synthesizing module 'rx_fifo' [C:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.runs/synth_1/.Xil/Vivado-29088-RT-C-0095M/realtime/rx_fifo_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'rx_fifo' (0#1) [C:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.runs/synth_1/.Xil/Vivado-29088-RT-C-0095M/realtime/rx_fifo_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'tx_fifo' [C:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.runs/synth_1/.Xil/Vivado-29088-RT-C-0095M/realtime/tx_fifo_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'tx_fifo' (0#1) [C:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.runs/synth_1/.Xil/Vivado-29088-RT-C-0095M/realtime/tx_fifo_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ftdi_synchronous_245' (0#1) [C:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:23]
-WARNING: [Synth 8-3848] Net usb_wr_n_o in module/entity ftdi_synchronous_245 does not have driver. [C:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:34]
-WARNING: [Synth 8-3848] Net TX_din in module/entity ftdi_synchronous_245 does not have driver. [C:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:77]
+INFO: [Synth 8-6157] synthesizing module 'ftdi_synchronous_245' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:23]
+INFO: [Synth 8-6157] synthesizing module 'rx_fifo' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.runs/synth_1/.Xil/Vivado-36076-RT-C-0095M/realtime/rx_fifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rx_fifo' (0#1) [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.runs/synth_1/.Xil/Vivado-36076-RT-C-0095M/realtime/rx_fifo_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'tx_fifo' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.runs/synth_1/.Xil/Vivado-36076-RT-C-0095M/realtime/tx_fifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'tx_fifo' (0#1) [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.runs/synth_1/.Xil/Vivado-36076-RT-C-0095M/realtime/tx_fifo_stub.v:6]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:255]
+INFO: [Synth 8-6155] done synthesizing module 'ftdi_synchronous_245' (0#1) [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:23]
 WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port usb_siwu_o driven by constant 1
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[63] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[62] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[61] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[60] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[59] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[58] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[57] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[56] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[55] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[54] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[53] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[52] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[51] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[50] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[49] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[48] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[47] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[46] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[45] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[44] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[43] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[42] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[41] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[40] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[39] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[38] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[37] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[36] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[35] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[34] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[33] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[32] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[31] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[30] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[29] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[28] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[27] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[26] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[25] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[24] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[23] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[22] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[21] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[20] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[19] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[18] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[17] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[16] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[15] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[14] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[13] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[12] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[11] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[10] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[9] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[8] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[7] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[6] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[5] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[4] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[3] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[2] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[1] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[0] driven by constant 0
 WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_fifo_empty_o driven by constant 0
 WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_fifo_cnt_o driven by constant 0
 WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port wr_fifo_full_o driven by constant 0
 WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port wr_fifo_afull_o driven by constant 0
 WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port wr_fifo_wr_ack_o driven by constant 0
 WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_fifo_data_valid_o driven by constant 0
-WARNING: [Synth 8-7129] Port usb_wr_n_o in module ftdi_synchronous_245 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wr_data_i in module ftdi_synchronous_245 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wr_en_i in module ftdi_synchronous_245 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port rd_en_i in module ftdi_synchronous_245 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1382.629 ; gain = 577.152
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1385.996 ; gain = 579.281
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1382.629 ; gain = 577.152
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1385.996 ; gain = 579.281
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1382.629 ; gain = 577.152
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1385.996 ; gain = 579.281
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1382.629 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1385.996 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/rx_fifo/rx_fifo/rx_fifo_in_context.xdc] for cell 'U_rx_fifo'
-Finished Parsing XDC File [c:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/rx_fifo/rx_fifo/rx_fifo_in_context.xdc] for cell 'U_rx_fifo'
-Parsing XDC File [c:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/tx_fifo/tx_fifo/tx_fifo_in_context.xdc] for cell 'U_tx_fifo'
-Finished Parsing XDC File [c:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/tx_fifo/tx_fifo/tx_fifo_in_context.xdc] for cell 'U_tx_fifo'
+Parsing XDC File [c:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/rx_fifo/rx_fifo/rx_fifo_in_context.xdc] for cell 'U_rx_fifo'
+Finished Parsing XDC File [c:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/rx_fifo/rx_fifo/rx_fifo_in_context.xdc] for cell 'U_rx_fifo'
+Parsing XDC File [c:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/tx_fifo/tx_fifo/tx_fifo_in_context.xdc] for cell 'U_tx_fifo'
+Finished Parsing XDC File [c:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/tx_fifo/tx_fifo/tx_fifo_in_context.xdc] for cell 'U_tx_fifo'
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1464.680 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1466.828 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1464.680 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1466.828 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1464.680 ; gain = 659.203
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1466.828 ; gain = 660.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -98,7 +156,7 @@ Start Loading Part and Timing Information
 Loading part: xcau15p-ffvb676-2-i
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1464.680 ; gain = 659.203
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1466.828 ; gain = 660.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -106,39 +164,31 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property KEEP_HIERARCHY = SOFT for U_rx_fifo. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for U_tx_fifo. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1464.680 ; gain = 659.203
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1466.828 ; gain = 660.113
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ftdi_synchronous_245'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                    IDLE |                              000 |                             0000
-                RX_ROUTE |                              001 |                             0010
-                RX_OE_S1 |                              010 |                             0011
-              RX_DATA_S2 |                              011 |                             0100
-               RX_RST_S3 |                              100 |                             0101
-              RX_DATA_S5 |                              101 |                             0111
-                   RX_S6 |                              110 |                             1000
-                TX_ROUTE |                              111 |                             0001
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ftdi_synchronous_245'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1464.680 ; gain = 659.203
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1466.828 ; gain = 660.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input    1 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
 +---Registers : 
-	               64 Bit    Registers := 1     
-	               32 Bit    Registers := 1     
+	               64 Bit    Registers := 2     
+	               32 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
 	                1 Bit    Registers := 7     
 +---Muxes : 
-	   8 Input    3 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 4     
-	   8 Input    1 Bit        Muxes := 14    
+	   2 Input    4 Bit        Muxes := 3     
+	   7 Input    4 Bit        Muxes := 2     
+	   8 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 4     
+	   8 Input    1 Bit        Muxes := 12    
+	   7 Input    1 Bit        Muxes := 9     
 	   2 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -157,37 +207,61 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port usb_siwu_o driven by constant 1
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_fifo_empty_o driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_fifo_cnt_o driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port wr_fifo_full_o driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port wr_fifo_afull_o driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port wr_fifo_wr_ack_o driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_fifo_data_valid_o driven by constant 0
-WARNING: [Synth 8-7129] Port usb_wr_n_o in module ftdi_synchronous_245 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wr_data_i in module ftdi_synchronous_245 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wr_en_i in module ftdi_synchronous_245 is either unconnected or has no load
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[63] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[62] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[61] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[60] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[59] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[58] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[57] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[56] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[55] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[54] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[53] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[52] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[51] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[50] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[49] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[48] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[47] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[46] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[45] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[44] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[43] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[42] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[41] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[40] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[39] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[38] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[37] driven by constant 0
+WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[36] driven by constant 0
+INFO: [Common 17-14] Message 'Synth 8-3917' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-7129] Port rd_en_i in module ftdi_synchronous_245 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1464.680 ; gain = 659.203
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1466.828 ; gain = 660.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1696.250 ; gain = 890.773
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1698.641 ; gain = 891.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1696.324 ; gain = 890.848
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1698.715 ; gain = 892.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5966] Removing register instance (\cnt_latency_reg[1] ) from module (ftdi_synchronous_245) as it has self-loop and (\cnt_latency_reg[1]__0 ) is actual driver [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:300]
+INFO: [Synth 8-5966] Removing register instance (\cnt_latency_reg[0] ) from module (ftdi_synchronous_245) as it has self-loop and (\cnt_latency_reg[0]__0 ) is actual driver [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:300]
+INFO: [Synth 8-5966] Removing register instance (\waiter_reg[2] ) from module (ftdi_synchronous_245) as it has self-loop and (\waiter_reg[2]__0 ) is actual driver [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:264]
+INFO: [Synth 8-5966] Removing register instance (\waiter_reg[1] ) from module (ftdi_synchronous_245) as it has self-loop and (\waiter_reg[1]__0 ) is actual driver [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:264]
+INFO: [Synth 8-5966] Removing register instance (\waiter_reg[0] ) from module (ftdi_synchronous_245) as it has self-loop and (\waiter_reg[0]__0 ) is actual driver [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:264]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1715.398 ; gain = 909.922
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1727.363 ; gain = 920.648
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -204,102 +278,55 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[63]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[62]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[61]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[60]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[59]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[58]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[57]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[56]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[55]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[54]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[53]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[52]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[51]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[50]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[49]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[48]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[47]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[46]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[45]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[44]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[43]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[42]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[41]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[40]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[39]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[38]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[37]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[36]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[35]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[34]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[33]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[32]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[31]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[30]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[29]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[28]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[27]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[26]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[25]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[24]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[23]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[22]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[21]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[20]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[19]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[18]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[17]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[16]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[15]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[14]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[13]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[12]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[11]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[10]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[9]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[8]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[7]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[6]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[5]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[4]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[3]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[2]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[1]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module U_tx_fifo has unconnected pin din[0]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1923.246 ; gain = 1117.770
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1925.086 ; gain = 1118.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1923.246 ; gain = 1117.770
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1925.086 ; gain = 1118.371
 ---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin state[3] with 1st driver pin 'state_reg[3]/Q' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:259]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin state[3] with 2nd driver pin 'state_reg[3]__0/Q' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:164]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin state[2] with 1st driver pin 'state_reg[2]/Q' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:259]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin state[2] with 2nd driver pin 'state_reg[2]__0/Q' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:164]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin state[1] with 1st driver pin 'state_reg[1]/Q' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:259]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin state[1] with 2nd driver pin 'state_reg[1]__0/Q' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:164]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin state[0] with 1st driver pin 'state_reg[0]/Q' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:259]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin state[0] with 2nd driver pin 'state_reg[0]__0/Q' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:164]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin usb_wr_n_o_OBUF with 1st driver pin 'usb_wr_n_o_reg__0/Q' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:176]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin usb_wr_n_o_OBUF with 2nd driver pin 'usb_wr_n_o_reg/Q' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:297]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        5|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1923.246 ; gain = 1117.770
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1925.086 ; gain = 1118.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1923.246 ; gain = 1117.770
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1925.086 ; gain = 1118.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1923.246 ; gain = 1117.770
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1925.086 ; gain = 1118.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1923.246 ; gain = 1117.770
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1925.086 ; gain = 1118.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -319,41 +346,43 @@ Report Cell Usage:
 +------+--------+------+
 |1     |rx_fifo |     1|
 |2     |tx_fifo |     1|
-|3     |BUFG    |     1|
-|4     |LUT1    |     2|
-|5     |LUT4    |     4|
-|6     |LUT5    |     4|
-|7     |LUT6    |     4|
-|8     |FDRE    |   105|
-|9     |IBUF    |    37|
-|10    |OBUF    |    74|
-|11    |OBUFT   |     1|
+|3     |BUFG    |     2|
+|4     |LUT1    |     5|
+|5     |LUT2    |     3|
+|6     |LUT3    |     1|
+|7     |LUT4    |     1|
+|8     |LUT5    |     9|
+|9     |LUT6    |     5|
+|10    |FDRE    |   177|
+|11    |FDSE    |     1|
+|12    |IBUF    |   101|
+|13    |OBUF    |   170|
 +------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1923.246 ; gain = 1117.770
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1925.086 ; gain = 1118.371
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 64 critical warnings and 13 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 1923.246 ; gain = 1035.719
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1923.246 ; gain = 1117.770
+Synthesis finished with 0 errors, 10 critical warnings and 73 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 1925.086 ; gain = 1037.539
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 1925.086 ; gain = 1118.371
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1923.246 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 38 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1925.086 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 103 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1932.125 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1933.957 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 38 instances were transformed.
-  BUFG => BUFGCE: 1 instance 
-  IBUF => IBUF (IBUFCTRL, INBUF): 37 instances
+  A total of 103 instances were transformed.
+  BUFG => BUFGCE: 2 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 101 instances
 
-Synth Design complete | Checksum: 21ebe2f8
+Synth Design complete | Checksum: 66fe298
 INFO: [Common 17-83] Releasing license: Synthesis
-29 Infos, 28 Warnings, 64 Critical Warnings and 0 Errors encountered.
+34 Infos, 103 Warnings, 10 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:42 . Memory (MB): peak = 1932.125 ; gain = 1505.488
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:45 . Memory (MB): peak = 1933.957 ; gain = 1508.289
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1932.125 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.runs/synth_1/ftdi_synchronous_245.dcp' has been generated.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1933.957 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.runs/synth_1/ftdi_synchronous_245.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file ftdi_synchronous_245_utilization_synth.rpt -pb ftdi_synchronous_245_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Dec 12 18:44:22 2025...
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 15 17:53:53 2025...

@@ -1,7 +1,13 @@
 Time resolution is 1 ps
 WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
 WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
-$stop called at time : 890 ns : File "C:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.srcs/sim_1/new/TB_ftdi_synchronous_245.v" Line 188
+Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: TB_ftdi_synchronous_245.U_ddr4_0.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[0].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
+Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: TB_ftdi_synchronous_245.U_ddr4_0.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[3].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
+Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: TB_ftdi_synchronous_245.U_ddr4_0.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[4].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
+Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: TB_ftdi_synchronous_245.U_ddr4_0.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[5].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
 WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
 WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
-$stop called at time : 890 ns : File "C:/Users/HUB4RT/Desktop/FTDI_FPGA/project_1/project_1.srcs/sim_1/new/TB_ftdi_synchronous_245.v" Line 188
+Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: TB_ftdi_synchronous_245.U_ddr4_0.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[0].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
+Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: TB_ftdi_synchronous_245.U_ddr4_0.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[3].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
+Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: TB_ftdi_synchronous_245.U_ddr4_0.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[4].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref
+Info: [Unisim HPIO_VREF-1] Fabric Tune Value changed to 0011111. Instance: TB_ftdi_synchronous_245.U_ddr4_0.inst.u_ddr4_mem_intfc.u_mig_ddr4_phy.inst.u_ddr_iob.genByte[5].u_ddr_iob_byte.genblk1.genVref.u_hpio_vref

@@ -39,10 +39,10 @@ module ftdi_synchronous_245(
 
 
     //++++++ FTDI Data Interface +++++++++
-    input wr_data_i,
+    input [63:0] wr_data_i,
     input wr_en_i,
     input rd_en_i,
-    output rd_data_o,
+    output [63:0] rd_data_o,
     output rd_fifo_empty_o,
     output rd_fifo_cnt_o,
     output wr_fifo_full_o,
@@ -115,9 +115,9 @@ tx_fifo U_tx_fifo (
   .rst(~reset_n_i),                  // input wire rst
   .wr_clk(clk_in_200),            // input wire wr_clk
   .rd_clk(usb_clock_i),            // input wire rd_clk
-  .din(TX_din),                  // input wire [63 : 0] din
-  .wr_en(TX_wr_en),              // input wire wr_en
-  .rd_en(TX_rd_en),              // input wire rd_en-----------
+  .din(TX_din),                  // input wire [63 : 0] din // wr_data_i
+  .wr_en(TX_wr_en),              // input wire wr_en // tx from fsm
+  .rd_en(TX_rd_en),              // input wire rd_en // from here
   .dout(TX_dout),                // output wire [31 : 0] dout
   .full(TX_full),                // output wire full
   .wr_ack(TX_wr_ack),            // output wire wr_ack
@@ -130,7 +130,6 @@ tx_fifo U_tx_fifo (
 );
 
 localparam IDLE = 4'b0000;
-localparam TX_ROUTE = 4'b0001;
 localparam RX_ROUTE = 4'b0010;
 localparam RX_OE_S1 = 4'b0011;
 localparam RX_DATA_S2 = 4'b0100;
@@ -138,11 +137,13 @@ localparam RX_RST_S3 = 4'b0101;
 localparam RX_REC_S4 = 4'b0110;
 localparam RX_DATA_S5 = 4'b0111;
 localparam RX_S6 = 4'b1000;
-localparam TX_S1 = 4'b1001;
-localparam TX_RST_S2 = 4'b1010;
-localparam TX_S3 = 4'b1011;
-localparam TX_S4 = 4'b1100;
-localparam FINAL = 4'b1111;
+
+localparam IDLE_TX = 3'b000;
+localparam TX_ROUTE = 3'b001;
+localparam TX_S1 = 3'b010;
+localparam TX_RST_S2 = 3'b011;
+localparam TX_S3 = 3'b100;
+localparam TX_S4 = 3'b101;
 
 reg [2:0] waiter = 0;
 reg [6:0] count = 0;
@@ -153,6 +154,7 @@ reg cnt = 0;
 reg [1:0] cnt_latency = 0;
 
 reg [3:0] state = IDLE;
+reg [2:0] stateTX = IDLE_TX;
 
 assign receive_data = usb_data_io;
 assign usb_siwu_o = 1;
@@ -165,9 +167,9 @@ always @(posedge usb_clock_i) begin
         case(state)
             // states
             IDLE: begin //0
-                TX_rd_en <= 0;
+                //TX_rd_en <= 0;
                 RX_rd_en <= 0;
-                TX_wr_en <= 0;
+                //TX_wr_en <= 0;
                 RX_wr_en <= 0;
                 usb_oe_n_o <= 1;
                 usb_rd_n_o <= 1;
@@ -176,57 +178,9 @@ always @(posedge usb_clock_i) begin
                 // prob change this make it so its fsm dependant rather than ftdi flags cuz this could be randomized
                 if (!usb_rxf_n_i) begin
                     state <= RX_ROUTE;
-                end else if (!usb_txe_n_i) begin
-                    state <= TX_ROUTE;
                 end else begin
                     state <= IDLE;
                 end
-            end
-
-            TX_ROUTE: begin //1
-                if (waiter < 3'b011) begin
-                    waiter <= waiter + 1;
-                    state <= TX_ROUTE;
-                end else begin
-                    waiter <= 0;
-                    state <= TX_S1;
-                end
-            end
-
-            TX_S1: begin
-                // there should be flag from fsm before this to ensure you actually got data from mig
-                TX_din <= example_data;
-                TX_wr_en <= 1;
-                if (usb_txe_n_i) begin
-                    state <= TX_RST_S2;
-                end else begin
-                    state <= TX_S1;
-                end
-            end
-
-            TX_RST_S2: begin
-                TX_wr_en <= 0;
-                state <= TX_S3;
-            end
-
-            TX_S3: begin
-                if (!TX_empty) begin
-                    TX_rd_en <= 1;
-                    state <= TX_S4;
-                end
-            end
-
-            TX_S4: begin
-                TX_rd_en <= 0;
-                if (TX_valid) begin
-                    usb_wr_n_o <= 0;
-                    fpga_to_ftdi <= TX_dout;
-                end  
-                if (cnt_latency == 2'b10) begin
-                    state <= IDLE;
-                    cnt_latency <= 0;
-                end
-                cnt_latency <= cnt_latency + 1;
             end
 
             RX_ROUTE: begin //2
@@ -284,13 +238,73 @@ always @(posedge usb_clock_i) begin
                 if (cnt_latency == 2'b10) begin
                     state <= IDLE;
                     cnt_latency <= 0;
-                end
+                end 
                 cnt_latency <= cnt_latency + 1;
             end
 
             default: state <= IDLE;
         endcase
     end
+end
+
+always @(posedge usb_clock_i) begin
+    if (~reset_n_i) begin
+        stateTX <= IDLE_TX;
+            // resets
+    end else begin
+        case(stateTX)
+            IDLE_TX: begin
+                if (wr_en_i) begin
+                    TX_din <= wr_data_i;
+                    state <= TX_ROUTE;
+                end
+            end
+
+            TX_ROUTE: begin //1
+                if (waiter < 3'b011) begin
+                    waiter <= waiter + 1;
+                    state <= TX_ROUTE;
+                end else begin
+                    waiter <= 0;
+                    state <= TX_S1;
+                end
+            end
+
+            TX_S1: begin
+                TX_wr_en <= 1;
+                if (!usb_txe_n_i) begin
+                    state <= TX_RST_S2;
+                end else begin
+                    state <= TX_S1;
+                end
+            end
+
+            TX_RST_S2: begin
+                TX_wr_en <= 0;
+                state <= TX_S3;
+            end
+
+            TX_S3: begin
+                if (!TX_empty) begin
+                    TX_rd_en <= 1;
+                    state <= TX_S4;
+                end
+            end
+
+            TX_S4: begin
+                TX_rd_en <= 0;
+                if (TX_valid) begin
+                    usb_wr_n_o <= 0;
+                    fpga_to_ftdi <= TX_dout;
+                end  
+                if (cnt_latency == 2'b10) begin
+                    state <= IDLE_TX;
+                    cnt_latency <= 0;
+                end
+                cnt_latency <= cnt_latency + 1;
+            end
+        endcase
+    end 
 end
 
 always @(posedge clk_in_200) begin
