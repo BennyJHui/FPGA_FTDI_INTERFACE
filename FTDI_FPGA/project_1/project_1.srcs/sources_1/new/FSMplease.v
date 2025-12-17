@@ -15,7 +15,7 @@ module fsmplease(
     input wire rd_fifo_empty_o,
     input wire rd_fifo_data_valid_o,
 
-    // ----- mig ----- //\
+    // ----- mig ----- //\7
     input wire app_rdy,
     input wire app_wdf_rdy,
     input wire app_rd_data_valid,
