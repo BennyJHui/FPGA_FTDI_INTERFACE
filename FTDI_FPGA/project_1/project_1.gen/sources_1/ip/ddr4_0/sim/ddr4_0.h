@@ -89,10 +89,10 @@ public:
   sc_core::sc_out< sc_dt::sc_bv<2> > c0_ddr4_ba;
   sc_core::sc_out< sc_dt::sc_bv<1> > c0_ddr4_cke;
   sc_core::sc_out< sc_dt::sc_bv<1> > c0_ddr4_cs_n;
-  sc_core::sc_out< sc_dt::sc_bv<4> > c0_ddr4_dm_dbi_n;
-  sc_core::sc_out< sc_dt::sc_bv<32> > c0_ddr4_dq;
-  sc_core::sc_out< sc_dt::sc_bv<4> > c0_ddr4_dqs_c;
-  sc_core::sc_out< sc_dt::sc_bv<4> > c0_ddr4_dqs_t;
+  sc_core::sc_out< sc_dt::sc_bv<2> > c0_ddr4_dm_dbi_n;
+  sc_core::sc_out< sc_dt::sc_bv<16> > c0_ddr4_dq;
+  sc_core::sc_out< sc_dt::sc_bv<2> > c0_ddr4_dqs_c;
+  sc_core::sc_out< sc_dt::sc_bv<2> > c0_ddr4_dqs_t;
   sc_core::sc_out< sc_dt::sc_bv<1> > c0_ddr4_odt;
   sc_core::sc_out< sc_dt::sc_bv<1> > c0_ddr4_bg;
   sc_core::sc_out< bool > c0_ddr4_reset_n;
@@ -111,9 +111,9 @@ public:
   sc_core::sc_out< bool > c0_ddr4_app_wdf_rdy;
   sc_core::sc_in< sc_dt::sc_bv<29> > c0_ddr4_app_addr;
   sc_core::sc_in< sc_dt::sc_bv<3> > c0_ddr4_app_cmd;
-  sc_core::sc_in< sc_dt::sc_bv<256> > c0_ddr4_app_wdf_data;
-  sc_core::sc_in< sc_dt::sc_bv<32> > c0_ddr4_app_wdf_mask;
-  sc_core::sc_out< sc_dt::sc_bv<256> > c0_ddr4_app_rd_data;
+  sc_core::sc_in< sc_dt::sc_bv<128> > c0_ddr4_app_wdf_data;
+  sc_core::sc_in< sc_dt::sc_bv<16> > c0_ddr4_app_wdf_mask;
+  sc_core::sc_out< sc_dt::sc_bv<128> > c0_ddr4_app_rd_data;
   sc_core::sc_in< bool > sys_rst;
 
   // Dummy Signals for IP Ports
@@ -151,10 +151,10 @@ public:
   sc_core::sc_out< sc_dt::sc_bv<2> > c0_ddr4_ba;
   sc_core::sc_out< sc_dt::sc_bv<1> > c0_ddr4_cke;
   sc_core::sc_out< sc_dt::sc_bv<1> > c0_ddr4_cs_n;
-  sc_core::sc_inout< sc_dt::sc_bv<4> > c0_ddr4_dm_dbi_n;
-  sc_core::sc_inout< sc_dt::sc_bv<32> > c0_ddr4_dq;
-  sc_core::sc_inout< sc_dt::sc_bv<4> > c0_ddr4_dqs_c;
-  sc_core::sc_inout< sc_dt::sc_bv<4> > c0_ddr4_dqs_t;
+  sc_core::sc_inout< sc_dt::sc_bv<2> > c0_ddr4_dm_dbi_n;
+  sc_core::sc_inout< sc_dt::sc_bv<16> > c0_ddr4_dq;
+  sc_core::sc_inout< sc_dt::sc_bv<2> > c0_ddr4_dqs_c;
+  sc_core::sc_inout< sc_dt::sc_bv<2> > c0_ddr4_dqs_t;
   sc_core::sc_out< sc_dt::sc_bv<1> > c0_ddr4_odt;
   sc_core::sc_out< sc_dt::sc_bv<1> > c0_ddr4_bg;
   sc_core::sc_out< bool > c0_ddr4_reset_n;
@@ -173,9 +173,9 @@ public:
   sc_core::sc_out< bool > c0_ddr4_app_wdf_rdy;
   sc_core::sc_in< sc_dt::sc_bv<29> > c0_ddr4_app_addr;
   sc_core::sc_in< sc_dt::sc_bv<3> > c0_ddr4_app_cmd;
-  sc_core::sc_in< sc_dt::sc_bv<256> > c0_ddr4_app_wdf_data;
-  sc_core::sc_in< sc_dt::sc_bv<32> > c0_ddr4_app_wdf_mask;
-  sc_core::sc_out< sc_dt::sc_bv<256> > c0_ddr4_app_rd_data;
+  sc_core::sc_in< sc_dt::sc_bv<128> > c0_ddr4_app_wdf_data;
+  sc_core::sc_in< sc_dt::sc_bv<16> > c0_ddr4_app_wdf_mask;
+  sc_core::sc_out< sc_dt::sc_bv<128> > c0_ddr4_app_rd_data;
   sc_core::sc_in< bool > sys_rst;
 
   // Dummy Signals for IP Ports
@@ -213,10 +213,10 @@ public:
   sc_core::sc_out< sc_dt::sc_bv<2> > c0_ddr4_ba;
   sc_core::sc_out< sc_dt::sc_bv<1> > c0_ddr4_cke;
   sc_core::sc_out< sc_dt::sc_bv<1> > c0_ddr4_cs_n;
-  sc_core::sc_out< sc_dt::sc_bv<4> > c0_ddr4_dm_dbi_n;
-  sc_core::sc_out< sc_dt::sc_bv<32> > c0_ddr4_dq;
-  sc_core::sc_out< sc_dt::sc_bv<4> > c0_ddr4_dqs_c;
-  sc_core::sc_out< sc_dt::sc_bv<4> > c0_ddr4_dqs_t;
+  sc_core::sc_out< sc_dt::sc_bv<2> > c0_ddr4_dm_dbi_n;
+  sc_core::sc_out< sc_dt::sc_bv<16> > c0_ddr4_dq;
+  sc_core::sc_out< sc_dt::sc_bv<2> > c0_ddr4_dqs_c;
+  sc_core::sc_out< sc_dt::sc_bv<2> > c0_ddr4_dqs_t;
   sc_core::sc_out< sc_dt::sc_bv<1> > c0_ddr4_odt;
   sc_core::sc_out< sc_dt::sc_bv<1> > c0_ddr4_bg;
   sc_core::sc_out< bool > c0_ddr4_reset_n;
@@ -235,9 +235,9 @@ public:
   sc_core::sc_out< bool > c0_ddr4_app_wdf_rdy;
   sc_core::sc_in< sc_dt::sc_bv<29> > c0_ddr4_app_addr;
   sc_core::sc_in< sc_dt::sc_bv<3> > c0_ddr4_app_cmd;
-  sc_core::sc_in< sc_dt::sc_bv<256> > c0_ddr4_app_wdf_data;
-  sc_core::sc_in< sc_dt::sc_bv<32> > c0_ddr4_app_wdf_mask;
-  sc_core::sc_out< sc_dt::sc_bv<256> > c0_ddr4_app_rd_data;
+  sc_core::sc_in< sc_dt::sc_bv<128> > c0_ddr4_app_wdf_data;
+  sc_core::sc_in< sc_dt::sc_bv<16> > c0_ddr4_app_wdf_mask;
+  sc_core::sc_out< sc_dt::sc_bv<128> > c0_ddr4_app_rd_data;
   sc_core::sc_in< bool > sys_rst;
 
   // Dummy Signals for IP Ports
@@ -275,10 +275,10 @@ public:
   sc_core::sc_out< sc_dt::sc_bv<2> > c0_ddr4_ba;
   sc_core::sc_out< sc_dt::sc_bv<1> > c0_ddr4_cke;
   sc_core::sc_out< sc_dt::sc_bv<1> > c0_ddr4_cs_n;
-  sc_core::sc_out< sc_dt::sc_bv<4> > c0_ddr4_dm_dbi_n;
-  sc_core::sc_out< sc_dt::sc_bv<32> > c0_ddr4_dq;
-  sc_core::sc_out< sc_dt::sc_bv<4> > c0_ddr4_dqs_c;
-  sc_core::sc_out< sc_dt::sc_bv<4> > c0_ddr4_dqs_t;
+  sc_core::sc_out< sc_dt::sc_bv<2> > c0_ddr4_dm_dbi_n;
+  sc_core::sc_out< sc_dt::sc_bv<16> > c0_ddr4_dq;
+  sc_core::sc_out< sc_dt::sc_bv<2> > c0_ddr4_dqs_c;
+  sc_core::sc_out< sc_dt::sc_bv<2> > c0_ddr4_dqs_t;
   sc_core::sc_out< sc_dt::sc_bv<1> > c0_ddr4_odt;
   sc_core::sc_out< sc_dt::sc_bv<1> > c0_ddr4_bg;
   sc_core::sc_out< bool > c0_ddr4_reset_n;
@@ -297,9 +297,9 @@ public:
   sc_core::sc_out< bool > c0_ddr4_app_wdf_rdy;
   sc_core::sc_in< sc_dt::sc_bv<29> > c0_ddr4_app_addr;
   sc_core::sc_in< sc_dt::sc_bv<3> > c0_ddr4_app_cmd;
-  sc_core::sc_in< sc_dt::sc_bv<256> > c0_ddr4_app_wdf_data;
-  sc_core::sc_in< sc_dt::sc_bv<32> > c0_ddr4_app_wdf_mask;
-  sc_core::sc_out< sc_dt::sc_bv<256> > c0_ddr4_app_rd_data;
+  sc_core::sc_in< sc_dt::sc_bv<128> > c0_ddr4_app_wdf_data;
+  sc_core::sc_in< sc_dt::sc_bv<16> > c0_ddr4_app_wdf_mask;
+  sc_core::sc_out< sc_dt::sc_bv<128> > c0_ddr4_app_rd_data;
   sc_core::sc_in< bool > sys_rst;
 
   // Dummy Signals for IP Ports
@@ -341,10 +341,10 @@ public:
   sc_core::sc_out< sc_dt::sc_bv<2> > c0_ddr4_ba;
   sc_core::sc_out< sc_dt::sc_bv<1> > c0_ddr4_cke;
   sc_core::sc_out< sc_dt::sc_bv<1> > c0_ddr4_cs_n;
-  sc_core::sc_out< sc_dt::sc_bv<4> > c0_ddr4_dm_dbi_n;
-  sc_core::sc_out< sc_dt::sc_bv<32> > c0_ddr4_dq;
-  sc_core::sc_out< sc_dt::sc_bv<4> > c0_ddr4_dqs_c;
-  sc_core::sc_out< sc_dt::sc_bv<4> > c0_ddr4_dqs_t;
+  sc_core::sc_out< sc_dt::sc_bv<2> > c0_ddr4_dm_dbi_n;
+  sc_core::sc_out< sc_dt::sc_bv<16> > c0_ddr4_dq;
+  sc_core::sc_out< sc_dt::sc_bv<2> > c0_ddr4_dqs_c;
+  sc_core::sc_out< sc_dt::sc_bv<2> > c0_ddr4_dqs_t;
   sc_core::sc_out< sc_dt::sc_bv<1> > c0_ddr4_odt;
   sc_core::sc_out< sc_dt::sc_bv<1> > c0_ddr4_bg;
   sc_core::sc_out< bool > c0_ddr4_reset_n;
@@ -363,9 +363,9 @@ public:
   sc_core::sc_out< bool > c0_ddr4_app_wdf_rdy;
   sc_core::sc_in< sc_dt::sc_bv<29> > c0_ddr4_app_addr;
   sc_core::sc_in< sc_dt::sc_bv<3> > c0_ddr4_app_cmd;
-  sc_core::sc_in< sc_dt::sc_bv<256> > c0_ddr4_app_wdf_data;
-  sc_core::sc_in< sc_dt::sc_bv<32> > c0_ddr4_app_wdf_mask;
-  sc_core::sc_out< sc_dt::sc_bv<256> > c0_ddr4_app_rd_data;
+  sc_core::sc_in< sc_dt::sc_bv<128> > c0_ddr4_app_wdf_data;
+  sc_core::sc_in< sc_dt::sc_bv<16> > c0_ddr4_app_wdf_mask;
+  sc_core::sc_out< sc_dt::sc_bv<128> > c0_ddr4_app_rd_data;
   sc_core::sc_in< bool > sys_rst;
 
   // Dummy Signals for IP Ports

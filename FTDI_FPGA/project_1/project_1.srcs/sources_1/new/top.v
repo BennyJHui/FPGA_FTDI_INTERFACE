@@ -62,8 +62,6 @@ module top(
     output reg LED2    
 );
 
-    wire [63:0] FTDI_TO_FPGA;
-
     //++++++ FTDI Data Interface +++++++++
     wire [63:0] wr_data_i;
     wire wr_en_i;
@@ -78,13 +76,13 @@ module top(
     wire c0_ddr4_ui_clk; // 200 MHz
     wire c0_ddr4_ui_clk_sync_rst;
     wire c0_init_calib_complete;
-    reg [28:0] c0_ddr4_app_addr;
-    reg [2:0] c0_ddr4_app_cmd;
-    reg c0_ddr4_app_en;
-    reg [127:0] c0_ddr4_app_wdf_data;
+    wire [28:0] c0_ddr4_app_addr;
+    wire [2:0] c0_ddr4_app_cmd;
+    wire c0_ddr4_app_en;
+    wire [127:0] c0_ddr4_app_wdf_data;
     wire c0_ddr4_app_wdf_end = 1;
     wire [15:0] c0_ddr4_app_wdf_mask = 0;
-    reg c0_ddr4_app_wdf_wren;
+    wire c0_ddr4_app_wdf_wren;
     wire c0_ddr4_app_rdy;
     wire [127:0] c0_ddr4_app_rd_data;
     wire c0_ddr4_app_rd_data_end;

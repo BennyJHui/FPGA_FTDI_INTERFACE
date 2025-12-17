@@ -3,22 +3,22 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Mon Dec 15 17:53:02 2025
-# Process ID         : 36076
-# Current directory  : C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.runs/synth_1
-# Command line       : vivado.exe -log ftdi_synchronous_245.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ftdi_synchronous_245.tcl
-# Log file           : C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.runs/synth_1/ftdi_synchronous_245.vds
-# Journal file       : C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.runs/synth_1\vivado.jou
-# Running On         : RT-C-0095M
+# Start of session at: Thu Dec 18 00:37:24 2025
+# Process ID         : 21448
+# Current directory  : C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.runs/synth_1
+# Command line       : vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file           : C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.runs/synth_1/top.vds
+# Journal file       : C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.runs/synth_1\vivado.jou
+# Running On         : Benny
 # Platform           : Windows Server 2016 or Windows 10
-# Operating System   : 22631
-# Processor Detail   : 11th Gen Intel(R) Core(TM) i7-11850H @ 2.50GHz
-# CPU Frequency      : 2496 MHz
-# CPU Physical cores : 8
-# CPU Logical cores  : 16
-# Host memory        : 33805 MB
-# Swap memory        : 6710 MB
-# Total Virtual      : 40516 MB
-# Available Virtual  : 17338 MB
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 5 8645HS w/ Radeon 760M Graphics
+# CPU Frequency      : 4292 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 14827 MB
+# Swap memory        : 8923 MB
+# Total Virtual      : 23750 MB
+# Available Virtual  : 4570 MB
 #-----------------------------------------------------------
-source ftdi_synchronous_245.tcl -notrace
+source top.tcl -notrace

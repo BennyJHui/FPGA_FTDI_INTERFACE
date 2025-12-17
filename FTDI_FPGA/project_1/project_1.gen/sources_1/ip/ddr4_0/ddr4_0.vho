@@ -62,10 +62,10 @@ COMPONENT ddr4_0
     c0_ddr4_ba : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     c0_ddr4_cke : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     c0_ddr4_cs_n : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-    c0_ddr4_dm_dbi_n : INOUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    c0_ddr4_dq : INOUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    c0_ddr4_dqs_c : INOUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    c0_ddr4_dqs_t : INOUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    c0_ddr4_dm_dbi_n : INOUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    c0_ddr4_dq : INOUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+    c0_ddr4_dqs_c : INOUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    c0_ddr4_dqs_t : INOUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     c0_ddr4_odt : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     c0_ddr4_bg : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     c0_ddr4_reset_n : OUT STD_LOGIC;
@@ -84,9 +84,9 @@ COMPONENT ddr4_0
     c0_ddr4_app_wdf_rdy : OUT STD_LOGIC;
     c0_ddr4_app_addr : IN STD_LOGIC_VECTOR(28 DOWNTO 0);
     c0_ddr4_app_cmd : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
-    c0_ddr4_app_wdf_data : IN STD_LOGIC_VECTOR(255 DOWNTO 0);
-    c0_ddr4_app_wdf_mask : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-    c0_ddr4_app_rd_data : OUT STD_LOGIC_VECTOR(255 DOWNTO 0);
+    c0_ddr4_app_wdf_data : IN STD_LOGIC_VECTOR(127 DOWNTO 0);
+    c0_ddr4_app_wdf_mask : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    c0_ddr4_app_rd_data : OUT STD_LOGIC_VECTOR(127 DOWNTO 0);
     sys_rst : IN STD_LOGIC 
   );
 END COMPONENT;

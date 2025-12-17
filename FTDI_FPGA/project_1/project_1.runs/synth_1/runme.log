@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log ftdi_synchronous_245.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ftdi_synchronous_245.tcl
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 
 
 
@@ -8,15 +8,15 @@
   **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
   **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
   **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-  **** Start of session at: Mon Dec 15 17:53:02 2025
+  **** Start of session at: Thu Dec 18 00:37:24 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
-source ftdi_synchronous_245.tcl -notrace
-Command: read_checkpoint -auto_incremental -incremental C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/utils_1/imports/synth_1/ftdi_synchronous_245.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/utils_1/imports/synth_1/ftdi_synchronous_245.dcp for incremental synthesis
+source top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.srcs/utils_1/imports/synth_1/ftdi_synchronous_245.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.srcs/utils_1/imports/synth_1/ftdi_synchronous_245.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
-Command: synth_design -top ftdi_synchronous_245 -part xcau15p-ffvb676-2-i
+Command: synth_design -top top -part xcau15p-ffvb676-2-i
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xcau15p'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcau15p'
@@ -25,121 +25,137 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 19800
+INFO: [Synth 8-7075] Helper process launched with PID 15432
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1274.707 ; gain = 467.992
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1288.004 ; gain = 465.965
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'ftdi_synchronous_245' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:23]
-INFO: [Synth 8-6157] synthesizing module 'rx_fifo' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.runs/synth_1/.Xil/Vivado-36076-RT-C-0095M/realtime/rx_fifo_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'rx_fifo' (0#1) [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.runs/synth_1/.Xil/Vivado-36076-RT-C-0095M/realtime/rx_fifo_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'tx_fifo' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.runs/synth_1/.Xil/Vivado-36076-RT-C-0095M/realtime/tx_fifo_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'tx_fifo' (0#1) [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.runs/synth_1/.Xil/Vivado-36076-RT-C-0095M/realtime/tx_fifo_stub.v:6]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:255]
-INFO: [Synth 8-6155] done synthesizing module 'ftdi_synchronous_245' (0#1) [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:23]
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port usb_siwu_o driven by constant 1
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[63] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[62] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[61] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[60] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[59] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[58] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[57] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[56] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[55] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[54] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[53] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[52] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[51] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[50] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[49] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[48] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[47] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[46] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[45] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[44] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[43] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[42] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[41] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[40] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[39] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[38] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[37] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[36] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[35] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[34] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[33] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[32] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[31] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[30] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[29] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[28] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[27] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[26] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[25] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[24] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[23] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[22] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[21] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[20] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[19] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[18] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[17] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[16] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[15] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[14] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[13] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[12] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[11] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[10] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[9] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[8] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[7] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[6] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[5] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[4] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[3] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[2] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[1] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[0] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_fifo_empty_o driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_fifo_cnt_o driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port wr_fifo_full_o driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port wr_fifo_afull_o driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port wr_fifo_wr_ack_o driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_fifo_data_valid_o driven by constant 0
-WARNING: [Synth 8-7129] Port rd_en_i in module ftdi_synchronous_245 is either unconnected or has no load
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ddr4_0' [C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.runs/synth_1/.Xil/Vivado-21448-Benny/realtime/ddr4_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ddr4_0' (0#1) [C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.runs/synth_1/.Xil/Vivado-21448-Benny/realtime/ddr4_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ftdi_245' [C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_245.v:23]
+INFO: [Synth 8-6157] synthesizing module 'rx_fifo' [C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.runs/synth_1/.Xil/Vivado-21448-Benny/realtime/rx_fifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rx_fifo' (0#1) [C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.runs/synth_1/.Xil/Vivado-21448-Benny/realtime/rx_fifo_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'tx_fifo' [C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.runs/synth_1/.Xil/Vivado-21448-Benny/realtime/tx_fifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'tx_fifo' (0#1) [C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.runs/synth_1/.Xil/Vivado-21448-Benny/realtime/tx_fifo_stub.v:6]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_245.v:141]
+INFO: [Synth 8-6155] done synthesizing module 'ftdi_245' (0#1) [C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_245.v:23]
+WARNING: [Synth 8-689] width (7) of port connection 'rd_fifo_cnt_o' does not match port width (1) of module 'ftdi_245' [C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/top.v:158]
+INFO: [Synth 8-6157] synthesizing module 'fsmplease' [C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/fsmplease.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'fsmplease' (0#1) [C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/fsmplease.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/top.v:23]
+WARNING: [Synth 8-3848] Net rd_fifo_cnt_o in module/entity ftdi_245 does not have driver. [C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_245.v:47]
+WARNING: [Synth 8-6014] Unused sequential element shift_data_sel_reg was removed.  [C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/fsmplease.v:91]
+WARNING: [Synth 8-3848] Net LED1 in module/entity top does not have driver. [C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/top.v:61]
+WARNING: [Synth 8-7129] Port rd_data_o[63] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[62] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[61] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[60] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[59] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[58] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[57] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[56] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[55] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[54] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[53] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[52] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[51] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[50] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[49] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[48] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[47] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[46] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[45] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[44] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[43] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[42] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[41] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[40] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[39] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[38] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[37] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[36] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[35] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[34] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[33] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[32] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[31] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[30] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[29] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[28] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[27] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[26] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[25] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[24] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[23] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[22] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[21] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[20] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[19] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[18] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[17] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[16] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[15] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[14] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[13] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[12] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[11] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[10] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[9] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[8] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[7] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[6] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[5] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[4] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[3] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[2] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[1] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_data_o[0] in module fsmplease is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_cnt_o in module ftdi_245 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LED1 in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port KEY2 in module top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1385.996 ; gain = 579.281
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1401.352 ; gain = 579.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1385.996 ; gain = 579.281
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1401.352 ; gain = 579.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1385.996 ; gain = 579.281
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1401.352 ; gain = 579.312
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1385.996 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1401.352 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/rx_fifo/rx_fifo/rx_fifo_in_context.xdc] for cell 'U_rx_fifo'
-Finished Parsing XDC File [c:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/rx_fifo/rx_fifo/rx_fifo_in_context.xdc] for cell 'U_rx_fifo'
-Parsing XDC File [c:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/tx_fifo/tx_fifo/tx_fifo_in_context.xdc] for cell 'U_tx_fifo'
-Finished Parsing XDC File [c:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/tx_fifo/tx_fifo/tx_fifo_in_context.xdc] for cell 'U_tx_fifo'
+Parsing XDC File [c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/rx_fifo/rx_fifo/rx_fifo_in_context.xdc] for cell 'u_ftdi_ctrl/U_rx_fifo'
+Finished Parsing XDC File [c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/rx_fifo/rx_fifo/rx_fifo_in_context.xdc] for cell 'u_ftdi_ctrl/U_rx_fifo'
+Parsing XDC File [c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/tx_fifo/tx_fifo/tx_fifo_in_context.xdc] for cell 'u_ftdi_ctrl/U_tx_fifo'
+Finished Parsing XDC File [c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/tx_fifo/tx_fifo/tx_fifo_in_context.xdc] for cell 'u_ftdi_ctrl/U_tx_fifo'
+Parsing XDC File [c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc] for cell 'U_ddr4_0'
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1497.250 ; gain = 20.934
+Finished Parsing XDC File [c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc] for cell 'U_ddr4_0'
+Parsing XDC File [C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.srcs/constrs_1/new/pins.xdc]
+WARNING: [Vivado 12-4174] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail. [C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.srcs/constrs_1/new/pins.xdc:88]
+WARNING: [Vivado 12-4174] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail. [C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.srcs/constrs_1/new/pins.xdc:90]
+Finished Parsing XDC File [C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.srcs/constrs_1/new/pins.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.srcs/constrs_1/new/pins.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1466.828 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1497.250 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1466.828 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1497.250 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'u_ftdi_ctrl/U_rx_fifo' at clock pin 'rd_clk' is different from the actual clock period '3.332', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'u_ftdi_ctrl/U_tx_fifo' at clock pin 'wr_clk' is different from the actual clock period '3.332', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1466.828 ; gain = 660.113
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1497.250 ; gain = 675.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -147,40 +163,175 @@ Start Loading Part and Timing Information
 Loading part: xcau15p-ffvb676-2-i
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1466.828 ; gain = 660.113
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1497.250 ; gain = 675.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for U_rx_fifo. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for U_tx_fifo. (constraint file  auto generated constraint).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_act_n. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_act_n. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[0]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[0]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[10]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[10]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[11]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[11]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[12]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[12]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[13]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[13]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[14]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[14]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[15]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[15]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[16]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 20).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[16]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[1]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 22).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[1]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[2]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 24).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[2]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[3]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 26).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[3]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[4]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 28).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[4]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[5]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 30).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[5]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[6]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 32).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[6]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 33).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[7]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 34).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[7]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 35).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[8]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 36).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[8]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 37).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_adr[9]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 38).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_adr[9]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 39).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_ba[0]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 40).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_ba[0]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 41).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_ba[1]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 42).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_ba[1]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 43).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_bg. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 44).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_bg. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 45).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_ck_c. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 46).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_ck_c. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 47).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_ck_t. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 48).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_ck_t. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 49).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_cke. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 50).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_cke. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 51).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_cs_n. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 52).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_cs_n. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 53).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[0]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 54).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[0]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 55).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[1]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 56).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dm_dbi_n[1]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 57).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[0]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 58).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[0]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 59).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[10]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 60).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[10]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 61).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[11]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 62).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[11]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 63).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[12]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 64).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[12]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 65).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[13]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 66).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[13]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 67).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[14]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 68).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[14]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 69).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[15]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 70).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[15]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 71).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[1]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 72).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[1]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 73).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[2]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 74).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[2]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 75).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[3]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 76).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[3]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 77).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[4]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 78).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[4]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 79).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[5]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 80).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[5]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 81).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[6]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 82).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[6]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 83).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[7]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 84).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[7]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 85).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[8]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 86).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[8]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 87).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dq[9]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 88).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dq[9]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 89).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[0]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 90).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[0]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 91).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[1]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 92).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_c[1]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 93).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[0]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 94).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[0]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 95).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[1]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 96).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_dqs_t[1]. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 97).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_odt. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 98).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_odt. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 99).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_ddr4_reset_n. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 100).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_ddr4_reset_n. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 101).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_sys_clk_n. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 102).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_sys_clk_n. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 103).
+Applied set_property IO_BUFFER_TYPE = NONE for c0_sys_clk_p. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 104).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for c0_sys_clk_p. (constraint file  c:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.gen/sources_1/ip/ddr4_0/ddr4_0/ddr4_0_in_context.xdc, line 105).
+Applied set_property KEEP_HIERARCHY = SOFT for u_ftdi_ctrl/U_rx_fifo. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_ftdi_ctrl/U_tx_fifo. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U_ddr4_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1466.828 ; gain = 660.113
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1497.250 ; gain = 675.211
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'states_reg' in module 'ftdi_245'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'fsmplease'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              001 |                             0000
+                RX_ROUTE |                              010 |                             0001
+                TX_ROUTE |                              100 |                             0010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'states_reg' using encoding 'one-hot' in module 'ftdi_245'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                       0000000001 |                             0000
+                   CHECK |                       0000000010 |                             0001
+              CHECK_DATA |                       0000000100 |                             0010
+               CHECK_CMD |                       0000001000 |                             0011
+               WRITE_REG |                       0000010000 |                             0100
+              WRITE_DONE |                       0000100000 |                             0110
+                READ_REG |                       0001000000 |                             0101
+               READ_DONE |                       0010000000 |                             0111
+               SHIFT_SET |                       0100000000 |                             1010
+             OUTPUT_DATA |                       1000000000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'fsmplease'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1466.828 ; gain = 660.113
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1497.250 ; gain = 675.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input    3 Bit       Adders := 1     
-	   2 Input    2 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 2     
 +---Registers : 
+	              256 Bit    Registers := 1     
+	              128 Bit    Registers := 1     
 	               64 Bit    Registers := 2     
-	               32 Bit    Registers := 2     
-	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 7     
+	               32 Bit    Registers := 3     
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 3     
+	                1 Bit    Registers := 11    
 +---Muxes : 
-	   2 Input    4 Bit        Muxes := 3     
-	   7 Input    4 Bit        Muxes := 2     
-	   8 Input    4 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 2     
-	   2 Input    2 Bit        Muxes := 4     
-	   8 Input    1 Bit        Muxes := 12    
-	   7 Input    1 Bit        Muxes := 9     
-	   2 Input    1 Bit        Muxes := 1     
+	  10 Input  256 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 1     
+	  10 Input   10 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 4     
+	   3 Input   10 Bit        Muxes := 1     
+	  10 Input    8 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 3     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 14    
+	   3 Input    1 Bit        Muxes := 11    
+	  10 Input    1 Bit        Muxes := 12    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -197,62 +348,31 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port usb_siwu_o driven by constant 1
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[63] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[62] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[61] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[60] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[59] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[58] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[57] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[56] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[55] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[54] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[53] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[52] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[51] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[50] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[49] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[48] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[47] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[46] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[45] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[44] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[43] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[42] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[41] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[40] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[39] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[38] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[37] driven by constant 0
-WARNING: [Synth 8-3917] design ftdi_synchronous_245 has port rd_data_o[36] driven by constant 0
-INFO: [Common 17-14] Message 'Synth 8-3917' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-WARNING: [Synth 8-7129] Port rd_en_i in module ftdi_synchronous_245 is either unconnected or has no load
+WARNING: [Synth 8-3917] design top has port usb_siwu_o driven by constant 1
+WARNING: [Synth 8-7129] Port LED1 in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port KEY2 in module top is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (u_fsm/FSM_onehot_state_reg[9]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_fsm/FSM_onehot_state_reg[8]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1466.828 ; gain = 660.113
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1497.250 ; gain = 675.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1698.641 ; gain = 891.926
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1707.289 ; gain = 885.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1698.715 ; gain = 892.000
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1717.359 ; gain = 895.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5966] Removing register instance (\cnt_latency_reg[1] ) from module (ftdi_synchronous_245) as it has self-loop and (\cnt_latency_reg[1]__0 ) is actual driver [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:300]
-INFO: [Synth 8-5966] Removing register instance (\cnt_latency_reg[0] ) from module (ftdi_synchronous_245) as it has self-loop and (\cnt_latency_reg[0]__0 ) is actual driver [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:300]
-INFO: [Synth 8-5966] Removing register instance (\waiter_reg[2] ) from module (ftdi_synchronous_245) as it has self-loop and (\waiter_reg[2]__0 ) is actual driver [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:264]
-INFO: [Synth 8-5966] Removing register instance (\waiter_reg[1] ) from module (ftdi_synchronous_245) as it has self-loop and (\waiter_reg[1]__0 ) is actual driver [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:264]
-INFO: [Synth 8-5966] Removing register instance (\waiter_reg[0] ) from module (ftdi_synchronous_245) as it has self-loop and (\waiter_reg[0]__0 ) is actual driver [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:264]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1727.363 ; gain = 920.648
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1736.926 ; gain = 914.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -270,54 +390,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1925.086 ; gain = 1118.371
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1934.426 ; gain = 1112.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1925.086 ; gain = 1118.371
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1934.426 ; gain = 1112.387
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin state[3] with 1st driver pin 'state_reg[3]/Q' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:259]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin state[3] with 2nd driver pin 'state_reg[3]__0/Q' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:164]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin state[2] with 1st driver pin 'state_reg[2]/Q' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:259]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin state[2] with 2nd driver pin 'state_reg[2]__0/Q' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:164]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin state[1] with 1st driver pin 'state_reg[1]/Q' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:259]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin state[1] with 2nd driver pin 'state_reg[1]__0/Q' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:164]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin state[0] with 1st driver pin 'state_reg[0]/Q' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:259]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin state[0] with 2nd driver pin 'state_reg[0]__0/Q' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:164]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin usb_wr_n_o_OBUF with 1st driver pin 'usb_wr_n_o_reg__0/Q' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:176]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin usb_wr_n_o_OBUF with 2nd driver pin 'usb_wr_n_o_reg/Q' [C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.srcs/sources_1/new/ftdi_synchronous_245.v:297]
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        5|Failed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1925.086 ; gain = 1118.371
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1934.426 ; gain = 1112.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1925.086 ; gain = 1118.371
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1934.426 ; gain = 1112.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1925.086 ; gain = 1118.371
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1934.426 ; gain = 1112.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1925.086 ; gain = 1118.371
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1934.426 ; gain = 1112.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -327,53 +430,55 @@ Report BlackBoxes:
 +------+--------------+----------+
 |      |BlackBox name |Instances |
 +------+--------------+----------+
-|1     |rx_fifo       |         1|
-|2     |tx_fifo       |         1|
+|1     |ddr4_0        |         1|
+|2     |rx_fifo       |         1|
+|3     |tx_fifo       |         1|
 +------+--------------+----------+
 
 Report Cell Usage: 
 +------+--------+------+
 |      |Cell    |Count |
 +------+--------+------+
-|1     |rx_fifo |     1|
-|2     |tx_fifo |     1|
-|3     |BUFG    |     2|
-|4     |LUT1    |     5|
-|5     |LUT2    |     3|
-|6     |LUT3    |     1|
-|7     |LUT4    |     1|
-|8     |LUT5    |     9|
-|9     |LUT6    |     5|
-|10    |FDRE    |   177|
-|11    |FDSE    |     1|
-|12    |IBUF    |   101|
-|13    |OBUF    |   170|
+|1     |ddr4    |     1|
+|2     |rx_fifo |     1|
+|3     |tx_fifo |     1|
+|4     |BUFG    |     1|
+|5     |LUT1    |     2|
+|6     |LUT2    |    11|
+|7     |LUT3    |     7|
+|8     |LUT4    |     3|
+|9     |LUT5    |     2|
+|10    |LUT6    |    11|
+|11    |FDRE    |    79|
+|12    |FDSE    |     5|
+|13    |IBUF    |     4|
+|14    |OBUF    |    37|
+|15    |OBUFT   |     1|
 +------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1925.086 ; gain = 1118.371
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1934.426 ; gain = 1112.387
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 10 critical warnings and 73 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 1925.086 ; gain = 1037.539
-Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 1925.086 ; gain = 1118.371
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 1934.426 ; gain = 1016.488
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1934.426 ; gain = 1112.387
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1925.086 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 103 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1934.426 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1933.957 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1943.301 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 103 instances were transformed.
-  BUFG => BUFGCE: 2 instances
-  IBUF => IBUF (IBUFCTRL, INBUF): 101 instances
+  A total of 5 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 4 instances
 
-Synth Design complete | Checksum: 66fe298
+Synth Design complete | Checksum: 3d7013f3
 INFO: [Common 17-83] Releasing license: Synthesis
-34 Infos, 103 Warnings, 10 Critical Warnings and 0 Errors encountered.
+39 Infos, 81 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:45 . Memory (MB): peak = 1933.957 ; gain = 1508.289
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1933.957 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.runs/synth_1/ftdi_synchronous_245.dcp' has been generated.
-INFO: [Vivado 12-24828] Executing command : report_utilization -file ftdi_synchronous_245_utilization_synth.rpt -pb ftdi_synchronous_245_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Dec 15 17:53:53 2025...
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 1943.301 ; gain = 1518.914
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1943.301 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.runs/synth_1/top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 18 00:38:12 2025...

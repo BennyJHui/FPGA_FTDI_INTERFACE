@@ -64,10 +64,10 @@ ddr4_0 your_instance_name (
   .c0_ddr4_ba(c0_ddr4_ba),                                // output wire [1 : 0] c0_ddr4_ba
   .c0_ddr4_cke(c0_ddr4_cke),                              // output wire [0 : 0] c0_ddr4_cke
   .c0_ddr4_cs_n(c0_ddr4_cs_n),                            // output wire [0 : 0] c0_ddr4_cs_n
-  .c0_ddr4_dm_dbi_n(c0_ddr4_dm_dbi_n),                    // inout wire [3 : 0] c0_ddr4_dm_dbi_n
-  .c0_ddr4_dq(c0_ddr4_dq),                                // inout wire [31 : 0] c0_ddr4_dq
-  .c0_ddr4_dqs_c(c0_ddr4_dqs_c),                          // inout wire [3 : 0] c0_ddr4_dqs_c
-  .c0_ddr4_dqs_t(c0_ddr4_dqs_t),                          // inout wire [3 : 0] c0_ddr4_dqs_t
+  .c0_ddr4_dm_dbi_n(c0_ddr4_dm_dbi_n),                    // inout wire [1 : 0] c0_ddr4_dm_dbi_n
+  .c0_ddr4_dq(c0_ddr4_dq),                                // inout wire [15 : 0] c0_ddr4_dq
+  .c0_ddr4_dqs_c(c0_ddr4_dqs_c),                          // inout wire [1 : 0] c0_ddr4_dqs_c
+  .c0_ddr4_dqs_t(c0_ddr4_dqs_t),                          // inout wire [1 : 0] c0_ddr4_dqs_t
   .c0_ddr4_odt(c0_ddr4_odt),                              // output wire [0 : 0] c0_ddr4_odt
   .c0_ddr4_bg(c0_ddr4_bg),                                // output wire [0 : 0] c0_ddr4_bg
   .c0_ddr4_reset_n(c0_ddr4_reset_n),                      // output wire c0_ddr4_reset_n
@@ -86,9 +86,9 @@ ddr4_0 your_instance_name (
   .c0_ddr4_app_wdf_rdy(c0_ddr4_app_wdf_rdy),              // output wire c0_ddr4_app_wdf_rdy
   .c0_ddr4_app_addr(c0_ddr4_app_addr),                    // input wire [28 : 0] c0_ddr4_app_addr
   .c0_ddr4_app_cmd(c0_ddr4_app_cmd),                      // input wire [2 : 0] c0_ddr4_app_cmd
-  .c0_ddr4_app_wdf_data(c0_ddr4_app_wdf_data),            // input wire [255 : 0] c0_ddr4_app_wdf_data
-  .c0_ddr4_app_wdf_mask(c0_ddr4_app_wdf_mask),            // input wire [31 : 0] c0_ddr4_app_wdf_mask
-  .c0_ddr4_app_rd_data(c0_ddr4_app_rd_data),              // output wire [255 : 0] c0_ddr4_app_rd_data
+  .c0_ddr4_app_wdf_data(c0_ddr4_app_wdf_data),            // input wire [127 : 0] c0_ddr4_app_wdf_data
+  .c0_ddr4_app_wdf_mask(c0_ddr4_app_wdf_mask),            // input wire [15 : 0] c0_ddr4_app_wdf_mask
+  .c0_ddr4_app_rd_data(c0_ddr4_app_rd_data),              // output wire [127 : 0] c0_ddr4_app_rd_data
   .sys_rst(sys_rst)                                      // input wire sys_rst
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------

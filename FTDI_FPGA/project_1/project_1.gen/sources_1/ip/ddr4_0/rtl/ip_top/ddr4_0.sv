@@ -67,7 +67,7 @@
 //*****************************************************************************
 
 `timescale 1ns/1ps
-(* CORE_GENERATION_INFO = "DDR4_SDRAM, DDR4_SDRAM,{x_ipProduct=Vivado 2017.2.0,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=DDR4_SDRAM,x_ipVersion=2.2, Controller_Type = DDR4_SDRAM, Time_Period = 833, Input_Clock_Period = 4998, Memory_Type = Components, Memory_Part = MT40A512M16LY-075, Ecc = false, Cas_Latency = 17, Cas_Write_Latency = 12, DQ_Width = 32, Chip_Select = true, Data_Mask = DM_NO_DBI, MEM_ADDR_ORDER = ROW_COLUMN_BANK,  Is_AXI_Enabled = false , Slot_cofiguration =  Single , Clamshell_cofiguration =  false ,IS_FASTER_SPEED_RAM = No, Is_custom_part = false, Memory_Voltage = 1.2V, Phy_Only = Complete_Memory_Controller, Debug_Port = Disable, Burst_Length = 8, System_Clock = Differential, AXI_Selection = false, AXI_Data_Width = 64,  AXI_ArbitrationScheme = RD_PRI_REG, AXI_Narrow_Burst = false, Simulation_Mode = BFM, Debug_Mode = Disable, Example_TG = SIMPLE_TG, Self_Refresh = false, Save_Restore = false, Enable_LVAUX = false,MicroBlaze_ECC = false,  Specify_MandD = false, CLKBOUT_MULT = 15, DIVCLK_DIVIDE = 2, CLKOUT0_DIVIDE = 5}" *) 
+(* CORE_GENERATION_INFO = "DDR4_SDRAM, DDR4_SDRAM,{x_ipProduct=Vivado 2017.2.0,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=DDR4_SDRAM,x_ipVersion=2.2, Controller_Type = DDR4_SDRAM, Time_Period = 833, Input_Clock_Period = 4998, Memory_Type = Components, Memory_Part = MT40A512M16HA-083E, Ecc = false, Cas_Latency = 16, Cas_Write_Latency = 12, DQ_Width = 16, Chip_Select = true, Data_Mask = DM_NO_DBI, MEM_ADDR_ORDER = ROW_COLUMN_BANK,  Is_AXI_Enabled = false , Slot_cofiguration =  Single , Clamshell_cofiguration =  false ,IS_FASTER_SPEED_RAM = No, Is_custom_part = false, Memory_Voltage = 1.2V, Phy_Only = Complete_Memory_Controller, Debug_Port = Disable, Burst_Length = 8, System_Clock = Differential, AXI_Selection = false, AXI_Data_Width = 64,  AXI_ArbitrationScheme = RD_PRI_REG, AXI_Narrow_Burst = false, Simulation_Mode = BFM, Debug_Mode = Disable, Example_TG = SIMPLE_TG, Self_Refresh = false, Save_Restore = false, Enable_LVAUX = false,MicroBlaze_ECC = false,  Specify_MandD = false, CLKBOUT_MULT = 15, DIVCLK_DIVIDE = 2, CLKOUT0_DIVIDE = 5}" *) 
 (* X_CORE_INFO = "ddr4_v2_2_24,Vivado 2024.2" *)
 (* dont_touch = "true" *) module ddr4_0
    (
@@ -86,10 +86,10 @@
    output [0:0]               c0_ddr4_ck_t,
    output [0:0]               c0_ddr4_ck_c,
    output                c0_ddr4_reset_n,
-   inout  [3:0]          c0_ddr4_dm_dbi_n,
-   inout  [31:0]          c0_ddr4_dq,
-   inout  [3:0]         c0_ddr4_dqs_c,
-   inout  [3:0]         c0_ddr4_dqs_t,
+   inout  [1:0]          c0_ddr4_dm_dbi_n,
+   inout  [15:0]          c0_ddr4_dq,
+   inout  [1:0]         c0_ddr4_dqs_c,
+   inout  [1:0]         c0_ddr4_dqs_t,
 
    output                c0_init_calib_complete,
    output                c0_ddr4_ui_clk,
@@ -101,12 +101,12 @@
    input  [2:0]          c0_ddr4_app_cmd,
    input                 c0_ddr4_app_en,
    input                 c0_ddr4_app_hi_pri,
-   input  [255:0]          c0_ddr4_app_wdf_data,
+   input  [127:0]          c0_ddr4_app_wdf_data,
    input                 c0_ddr4_app_wdf_end,
-   input  [31:0]          c0_ddr4_app_wdf_mask,
+   input  [15:0]          c0_ddr4_app_wdf_mask,
    input                 c0_ddr4_app_wdf_wren,
 
-   output [255:0]          c0_ddr4_app_rd_data,
+   output [127:0]          c0_ddr4_app_rd_data,
    output                c0_ddr4_app_rd_data_end,
    output                c0_ddr4_app_rd_data_valid,
    output                c0_ddr4_app_rdy,

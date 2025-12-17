@@ -103,12 +103,12 @@
   PhyIP_TimePeriod = 833,
   PhyIP_InputClockPeriod = 4998,
   PhyIP_MemoryType = "Components",
-  PhyIP_MemoryPart = "MT40A512M16LY-075",
+  PhyIP_MemoryPart = "MT40A512M16HA-083E",
   PhyIP_PhyClockRatio = "4:1",
   PhyIP_ECC = "false",
-  PhyIP_CasLatency = 17,
+  PhyIP_CasLatency = 16,
   PhyIP_CasWriteLatency = 12,
-  PhyIP_DataWidth = 32,
+  PhyIP_DataWidth = 16,
   PhyIP_ChipSelect = "true",
   PhyIP_Slot = "Single",
   PhyIP_isCKEShared = "false",
@@ -137,9 +137,9 @@
   PhyIP_Phy_Only = "Complete_Memory_Controller",
   PhyIP_DEBUG_SIGNAL = "Disable",
   PhyIP_CLKOUTPHY_MODE = "VCO_2X",
-  PhyIP_DQ_WIDTH = 32,
+  PhyIP_DQ_WIDTH = 16,
   PhyIP_MEM_DEVICE_WIDTH = 16,
-  PhyIP_MIN_PERIOD = 750,
+  PhyIP_MIN_PERIOD = 833,
   PhyIP_USE_DM_PORT = "DM_NO_DBI",
   PhyIP_USE_CS_PORT = "true",
   PhyIP_ADDR_WIDTH = 17,
@@ -157,8 +157,8 @@
   PhyIP_ODT_WIDTH = 1,
   PhyIP_nCS_PER_RANK = 1,
   PhyIP_DATABITS_PER_STROBE = 8,
-  PhyIP_DQS_WIDTH = 4,
-  PhyIP_DM_WIDTH = 4
+  PhyIP_DQS_WIDTH = 2,
+  PhyIP_DM_WIDTH = 2
 
 *)
 (* dont_touch = "true" *) module ddr4_0_ddr4 #
@@ -174,9 +174,9 @@
     parameter integer COL_WIDTH               = 10,
     parameter integer CS_WIDTH                = 1,
     parameter integer ODT_WIDTH               = 1,
-    parameter integer DQ_WIDTH                = 32,
-    parameter integer DQS_WIDTH               = 4,
-    parameter integer DM_WIDTH                = 4,
+    parameter integer DQ_WIDTH                = 16,
+    parameter integer DQS_WIDTH               = 2,
+    parameter integer DM_WIDTH                = 2,
 
     parameter         DRAM_TYPE               = "DDR4",
     parameter         MEM_ADDR_ORDER          = "ROW_COLUMN_BANK",
@@ -192,18 +192,18 @@
     parameter         tCK                     = 833,  // Memory clock period (DDR4 clock cycle)
 
     parameter         tFAW                    = 37,//In DDR4 clock cycles
-    parameter         tRTW                    = 13, // CL + (BL/2) - CWL + 4tCK In DDR4 clock cycles
+    parameter         tRTW                    = 12, // CL + (BL/2) - CWL + 4tCK In DDR4 clock cycles
     parameter         tWTR_L                  = 10, //In DDR4 clock cycles
     parameter         tWTR_S                  = 4, //In DDR4 clock cycles
     parameter         tRFC                    = 421, //In DDR4 clock cycles
     parameter         tREFI                   = 9363, //In DDR4 clock cycles
     parameter         ZQINTVL                 = 1200480193, //In DDR4 clock cycles
     parameter         tZQCS                   = 128, //In DDR4 clock cycles
-    parameter         tRP                     = 18, //In DDR4 clock cycles
+    parameter         tRP                     = 16, //In DDR4 clock cycles
     parameter         tRRD_L                  = 8, //In DDR4 clock cycles
     parameter         tRRD_S                  = 7, //In DDR4 clock cycles
     parameter         tRAS                    = 39, //In DDR4 clock cycles
-    parameter         tRCD                    = 18, //In DDR4 clock cycles
+    parameter         tRCD                    = 16, //In DDR4 clock cycles
     parameter         tRTP                    = 10, //In DDR4 clock cycles
 
     parameter         tWR                     = 20, //In DDR4 clock cycles
@@ -212,7 +212,7 @@
     parameter         ODTWRDUR                = 4'd6,
     parameter         ODTWRODEL               = 5'd9,
     parameter         ODTWRODUR               = 4'd6,
-    parameter         ODTRDDEL                = 5'd17,
+    parameter         ODTRDDEL                = 5'd16,
     parameter         ODTRDDUR                = 4'd6,
     parameter         ODTRDODEL               = 5'd9,
     parameter         ODTRDODUR               = 4'd6,
@@ -235,8 +235,8 @@
     parameter         EXTRA_CMD_DELAY         = 0,
     parameter         nCK_PER_CLK             = 4,
     parameter         APP_ADDR_WIDTH          = 29,
-    parameter         APP_DATA_WIDTH          = 256,
-    parameter         APP_MASK_WIDTH          = 32,
+    parameter         APP_DATA_WIDTH          = 128,
+    parameter         APP_MASK_WIDTH          = 16,
 
     parameter         CLKIN_PERIOD_MMCM        = 4998,
     parameter         CLKFBOUT_MULT_MMCM       = 15,
@@ -273,13 +273,13 @@
     parameter SAVE_RESTORE                      = "false",
     parameter RESTORE_CRC                       = "false",
     parameter IS_CKE_SHARED                     = "false",
-    parameter MEMORY_PART                       = "MT40A512M16LY-075",
+    parameter MEMORY_PART                       = "MT40A512M16HA-083E",
     parameter integer COMPONENT_WIDTH           = 16,
     parameter NUM_SLOT                          = 1,
     parameter RANK_SLOT                         = 1,
     parameter         PING_PONG_PHY             = 1, 
     parameter MEMORY_DENSITY                    = "8Gb",
-    parameter MEMORY_SPEED_GRADE                = "075",
+    parameter MEMORY_SPEED_GRADE                = "083E",
     parameter MEMORY_WIDTH                      = "16",
     parameter MEMORY_CONFIGURATION              = "COMPONENT",
     parameter         SYSCLK_TYPE             = "DIFFERENTIAL",
@@ -291,8 +291,8 @@
     parameter         DDR4_CLAMSHELL       = "OFF",
 
     parameter DDR4_REG_PARITY_ENABLE            = "OFF",
-    parameter integer DBYTES                    = 4,
-    parameter         MR0                       = 13'b0101101100100,
+    parameter integer DBYTES                    = 2,
+    parameter         MR0                       = 13'b0101100110100,
     parameter         DDR4_DB_HIF_RTT_NOM     = 4'b0011, 
     parameter         DDR4_DB_HIF_RTT_WR      = 4'b0000, 
     parameter         DDR4_DB_HIF_RTT_PARK    = 4'b0000, 

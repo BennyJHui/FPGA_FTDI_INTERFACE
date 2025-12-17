@@ -75,10 +75,10 @@ module ddr4_0 (
   output bit [1 : 0] c0_ddr4_ba,
   output bit [0 : 0] c0_ddr4_cke,
   output bit [0 : 0] c0_ddr4_cs_n,
-  output bit [3 : 0] c0_ddr4_dm_dbi_n,
-  output bit [31 : 0] c0_ddr4_dq,
-  output bit [3 : 0] c0_ddr4_dqs_c,
-  output bit [3 : 0] c0_ddr4_dqs_t,
+  output bit [1 : 0] c0_ddr4_dm_dbi_n,
+  output bit [15 : 0] c0_ddr4_dq,
+  output bit [1 : 0] c0_ddr4_dqs_c,
+  output bit [1 : 0] c0_ddr4_dqs_t,
   output bit [0 : 0] c0_ddr4_odt,
   output bit [0 : 0] c0_ddr4_bg,
   output bit_as_bool c0_ddr4_reset_n,
@@ -97,9 +97,9 @@ module ddr4_0 (
   output bit_as_bool c0_ddr4_app_wdf_rdy,
   input bit [28 : 0] c0_ddr4_app_addr,
   input bit [2 : 0] c0_ddr4_app_cmd,
-  input bit [255 : 0] c0_ddr4_app_wdf_data,
-  input bit [31 : 0] c0_ddr4_app_wdf_mask,
-  output bit [255 : 0] c0_ddr4_app_rd_data,
+  input bit [127 : 0] c0_ddr4_app_wdf_data,
+  input bit [15 : 0] c0_ddr4_app_wdf_mask,
+  output bit [127 : 0] c0_ddr4_app_rd_data,
   input bit_as_bool sys_rst
 );
 endmodule
@@ -119,10 +119,10 @@ module ddr4_0 (c0_init_calib_complete,dbg_clk,c0_sys_clk_p,c0_sys_clk_n,dbg_bus,
   output wire [1 : 0] c0_ddr4_ba;
   output wire [0 : 0] c0_ddr4_cke;
   output wire [0 : 0] c0_ddr4_cs_n;
-  inout wire [3 : 0] c0_ddr4_dm_dbi_n;
-  inout wire [31 : 0] c0_ddr4_dq;
-  inout wire [3 : 0] c0_ddr4_dqs_c;
-  inout wire [3 : 0] c0_ddr4_dqs_t;
+  inout wire [1 : 0] c0_ddr4_dm_dbi_n;
+  inout wire [15 : 0] c0_ddr4_dq;
+  inout wire [1 : 0] c0_ddr4_dqs_c;
+  inout wire [1 : 0] c0_ddr4_dqs_t;
   output wire [0 : 0] c0_ddr4_odt;
   output wire [0 : 0] c0_ddr4_bg;
   output wire c0_ddr4_reset_n;
@@ -141,9 +141,9 @@ module ddr4_0 (c0_init_calib_complete,dbg_clk,c0_sys_clk_p,c0_sys_clk_n,dbg_bus,
   output wire c0_ddr4_app_wdf_rdy;
   input bit [28 : 0] c0_ddr4_app_addr;
   input bit [2 : 0] c0_ddr4_app_cmd;
-  input bit [255 : 0] c0_ddr4_app_wdf_data;
-  input bit [31 : 0] c0_ddr4_app_wdf_mask;
-  output wire [255 : 0] c0_ddr4_app_rd_data;
+  input bit [127 : 0] c0_ddr4_app_wdf_data;
+  input bit [15 : 0] c0_ddr4_app_wdf_mask;
+  output wire [127 : 0] c0_ddr4_app_rd_data;
   input bit sys_rst;
 endmodule
 `endif

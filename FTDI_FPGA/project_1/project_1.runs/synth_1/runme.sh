@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/HUB4RT/Desktop/FPGA_FTDI_INTERFACE-main/FTDI_FPGA/project_1/project_1.runs/synth_1'
+HD_PWD='C:/Users/2005B/OneDrive/Desktop/FTDI_FPGA/FTDI_FPGA/project_1/project_1.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log ftdi_synchronous_245.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ftdi_synchronous_245.tcl
+EAStep vivado -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl

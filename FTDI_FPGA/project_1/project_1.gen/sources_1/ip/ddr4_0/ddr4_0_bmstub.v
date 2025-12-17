@@ -66,13 +66,13 @@ module ddr4_0 (
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddr4:1.0 C0_DDR4 CS_N" *)
   output [0:0]c0_ddr4_cs_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddr4:1.0 C0_DDR4 DM_N" *)
-  inout [3:0]c0_ddr4_dm_dbi_n;
+  inout [1:0]c0_ddr4_dm_dbi_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddr4:1.0 C0_DDR4 DQ" *)
-  inout [31:0]c0_ddr4_dq;
+  inout [15:0]c0_ddr4_dq;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddr4:1.0 C0_DDR4 DQS_C" *)
-  inout [3:0]c0_ddr4_dqs_c;
+  inout [1:0]c0_ddr4_dqs_c;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddr4:1.0 C0_DDR4 DQS_T" *)
-  inout [3:0]c0_ddr4_dqs_t;
+  inout [1:0]c0_ddr4_dqs_t;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddr4:1.0 C0_DDR4 ODT" *)
   output [0:0]c0_ddr4_odt;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddr4:1.0 C0_DDR4 BG" *)
@@ -114,11 +114,11 @@ module ddr4_0 (
   (* X_INTERFACE_IGNORE = "true" *)
   input [2:0]c0_ddr4_app_cmd;
   (* X_INTERFACE_IGNORE = "true" *)
-  input [255:0]c0_ddr4_app_wdf_data;
+  input [127:0]c0_ddr4_app_wdf_data;
   (* X_INTERFACE_IGNORE = "true" *)
-  input [31:0]c0_ddr4_app_wdf_mask;
+  input [15:0]c0_ddr4_app_wdf_mask;
   (* X_INTERFACE_IGNORE = "true" *)
-  output [255:0]c0_ddr4_app_rd_data;
+  output [127:0]c0_ddr4_app_rd_data;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 SYSTEM_RESET RST" *)
   (* X_INTERFACE_MODE = "slave SYSTEM_RESET" *)
   (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SYSTEM_RESET, POLARITY ACTIVE_HIGH, BOARD.ASSOCIATED_PARAM RESET_BOARD_INTERFACE, INSERT_VIP 0" *)
