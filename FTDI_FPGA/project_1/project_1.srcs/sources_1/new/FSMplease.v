@@ -45,10 +45,8 @@ module fsmplease(
     localparam WR_REG = 4'b1001;
     localparam RD_REG  = 4'b1010;
 
-    reg [63:0] shift_data_sel;
-
     reg [63:0] data_storage;
-    reg [255:0] data_read_from_memory;
+    reg [127:0] data_read_from_memory;
     reg [3:0] state = IDLE;
     reg [31:0] select_data;
     reg [7:0] shift_count;
@@ -88,7 +86,7 @@ module fsmplease(
                     rd_en_i <= 0;
                     wr_en_i <= 0;
                     if (rd_fifo_data_valid_o) begin
-                        shift_data_sel <= rd_data_o;
+                        data_storage <= rd_data_o;
                         state <= CHECK_CMD;
                     end
                 end
@@ -109,7 +107,7 @@ module fsmplease(
                         app_wdf_wren <= 1;
                         app_addr <= {16'b0, data_storage[59:48]};
                         app_cmd <= CMD_WRITE;
-                        app_wdf_data <= {192'b0, WR_REG, data_storage[59:16], 16'b0};
+                        app_wdf_data <= {64'b0, WR_REG, data_storage[59:16], 16'b0};
                         state <= WRITE_DONE;
                     end                    
                 end
@@ -150,10 +148,10 @@ module fsmplease(
                 end
 
                 SHIFT_SET: begin
-                    if ((data_read_from_memory[255:252] == 4'b1001) || (data_read_from_memory[255:252] == 4'b1010)) begin
-                        select_data <= data_read_from_memory[239:208];
+                    if ((data_read_from_memory[127:124] == 4'b1001) || (data_read_from_memory[127:124] == 4'b1010)) begin
+                        select_data <= data_read_from_memory[123:92];
                         state <= OUTPUT_DATA;
-                    end else if (shift_count == 8'd255) begin
+                    end else if (shift_count == 8'd127) begin
                         select_data <= 0;
                         state <= IDLE;
                     end else begin

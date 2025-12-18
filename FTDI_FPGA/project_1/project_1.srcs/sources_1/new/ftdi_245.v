@@ -128,7 +128,10 @@ reg [3:0] states = IDLE;
 reg [2:0] cnt_RX = 0;
 reg [2:0] cnt_TX = 0;
 reg fin = 0;
-reg [31:0] d_out;
+reg fpga_route;
+
+wire [31:0] usb_data_i;
+reg [31:0] usb_data_o;
 
 always @(posedge usb_clock_i) begin
     if (~reset_n_i) begin
@@ -144,6 +147,7 @@ always @(posedge usb_clock_i) begin
                     usb_wr_n_o <= 1;
                     if (cnt_RX == 3'b010) begin
                         usb_oe_n_o <= 0;
+                        fpga_route <= 0;
                     end else if (cnt_RX == 3'b11) begin
                         usb_rd_n_o <= 0;
                         cnt_RX <= 0;
@@ -156,6 +160,8 @@ always @(posedge usb_clock_i) begin
                 
                 else if ((!usb_txe_n_i) & (!TX_empty)) begin
                     usb_rd_n_o <= 1;
+                    usb_oe_n_o <= 1;
+                    fpga_route <= 1;
                     if (TX_valid) begin
                         if (cnt_TX == 3'b010) begin
                             states <= TX_ROUTE;
@@ -173,11 +179,13 @@ always @(posedge usb_clock_i) begin
                     usb_wr_n_o <= 1;
                     usb_oe_n_o <= 1;
                     RX_wr_en <= 0;
+                    TX_rd_en   <= 0;
+                    fpga_route <= 0;
                 end 
             end
 
             RX_ROUTE: begin
-                RX_din <= usb_data_io;
+                RX_din <= usb_data_i;
                 if (fin) begin
                     fin <= 0;
                     RX_wr_en <= 0; 
@@ -188,7 +196,7 @@ always @(posedge usb_clock_i) begin
             end
 
             TX_ROUTE: begin
-                d_out <= TX_dout;
+                usb_data_o <= TX_dout;
                 if (fin) begin
                     fin <= 0;
                     TX_rd_en <= 0; 
@@ -217,6 +225,7 @@ assign TX_wr_en = wr_en_i;
 assign TX_din = wr_data_i;
 
 // data output from fpga to ftdi
-assign usb_data_io = d_out;
+assign usb_data_i = usb_data_io;
+assign usb_data_io = fpga_route ? usb_data_o : 32'hZZZZZZZZ;
 
 endmodule
